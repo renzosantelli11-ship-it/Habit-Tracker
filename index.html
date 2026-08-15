@@ -916,8 +916,14 @@ function App() {
   const handleImportFile = (e) => {
     const file = e.target.files && e.target.files[0];
     if (!file) return;
+    setImportMsg("Leyendo archivo…");
     const reader = new FileReader();
+    const failSafe = setTimeout(() => {
+      setImportMsg("No se pudo leer el archivo (tardó demasiado). Intenta de nuevo o elige el archivo desde \"Archivos\" en vez de iCloud Drive.");
+      setTimeout(() => setImportMsg(""), 5000);
+    }, 8000);
     reader.onload = () => {
+      clearTimeout(failSafe);
       try {
         const data = JSON.parse(reader.result);
         if (data.habits) setHabits(data.habits);
@@ -925,11 +931,22 @@ function App() {
         if (data.sleep) setSleepLog(data.sleep);
         setImportMsg("Copia restaurada correctamente");
       } catch (err) {
-        setImportMsg("El archivo no es válido");
+        setImportMsg("El archivo no es válido (no se pudo interpretar como JSON)");
       }
       setTimeout(() => setImportMsg(""), 3000);
     };
-    reader.readAsText(file);
+    reader.onerror = () => {
+      clearTimeout(failSafe);
+      setImportMsg("Error al leer el archivo. Intenta de nuevo o elige el archivo desde \"Archivos\" en vez de iCloud Drive.");
+      setTimeout(() => setImportMsg(""), 5000);
+    };
+    try {
+      reader.readAsText(file);
+    } catch (err) {
+      clearTimeout(failSafe);
+      setImportMsg("No se pudo iniciar la lectura del archivo");
+      setTimeout(() => setImportMsg(""), 5000);
+    }
     e.target.value = "";
   };
 
@@ -1425,7 +1442,7 @@ function App() {
           <div className="card-quiet-pad">
             <button className="btn-quiet" onClick={exportData}>Exportar copia de seguridad</button>
             <button className="btn-quiet" onClick={triggerImport}>Importar copia</button>
-            <input ref={fileInputRef} type="file" accept="application/json" style={{ display: "none" }} onChange={handleImportFile} />
+            <input ref={fileInputRef} type="file" accept=".json,application/json,text/json,text/plain" style={{ display: "none" }} onChange={handleImportFile} />
             {importMsg && <p className="sub-note">{importMsg}</p>}
             <p className="sub-note" style={{ marginTop: 10 }}>Tus datos ya se guardan en este dispositivo automáticamente. Exporta una copia de vez en cuando por si cambias de teléfono o borras datos de Safari.</p>
           </div>
