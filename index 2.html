@@ -1,0 +1,1659 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="Hábitos" />
+<title>Hábitos</title>
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQCAIAAAAP3aGbAAALN0lEQVR4nO3dS07jWhSGUShVo0SfsTChkhgTUk2IsaRN1e1xGynl5vIISbzP47fXGgDnWI6/bJtAbl9fX2824/fvf0ZvAerd3f0YvYVObtcaLG1i41ZZsVUFS6TgQ6uJV3ywRAouEh2v1GDpFCyUWK6wYOkUlAsqV0awdAo6mL9cswdLqqCzmbM1b7CkCgaaM1szBkuqYBKzZWuuYEkVTGiebM0SLKmCyc2QrfHBkioIMjZb3waufaNWkGbsNTtswpIqiDZk1BozYakVpBtyFfeesKQKVqbnqNV1wlIrWJ+e13W/YKkVrFW3q7vHLaFUwUa0vj1sPmGpFWxH6+u9bbDUCram6VXfMFhqBdvU7tpvFSy1gi1rVIAmwVIroEUH6oOlVsBeeQ2Kg6VWwLHaJlQGS62A9wrLUBYstQI+U9WHmmCpFXBaSSUKgqVWwDmWt2JpsNQKON/CYiwKlloBl1rSjeuDpVbAda6ux+AvoQA435XBMl4BS1zXkGuCpVbAcleU5OJgqRVQ5dKeeIYFxLgsWMYroNZFVbkgWGoFtHB+W9wSAjHODZbxCmjnzMKcFSy1Alo7pzNuCYEYXwfLeAX08WVtTFhAjC+CZbwCejrdHBMWEONUsIxXQH8nymPCAmJ8GizjFTDKZ/0xYQExPg6W8QoY68MKmbCAGB8Ey3gFzOB9i0xYQAzBAmK8DZb7QWAeb4pkwgJiCBYQ43/Bcj8IzOa4SyYsIIZgATH+C5b7QWBOhzqZsIAYggXEECwgxt9geYAFzGzfKBMWEEOwgBiCBcS4fX199QALiGDCAmIIFhBDsIAYggXEECwghmABMb75TAOQwoQFxBAsIIZgATEEC4ghWEAMwQJiCBYQQ7CAGIIFxBAsIIZgATEEC4ghWEAMwQJiCBYQQ7CAGIIFxBAsIIZgATEEC4ghWEAMwQJiCBYQQ7CAGIIFxBAsIIZgATEEC4ghWEAMwQJifB+9gU3Y7XYtfuz9/X2LH3uCAzmt/4Fsze3Ly5/Re1izRhfGsT4XiQM5n2y1I1itdLgwjrW7SBzIdWSrBc+wmuh8bbRb0YEErbgFglVv1Cu1fF0HErruiglWsbGv0cLVHcgKVl8fwQJiCFalGd5OS/bgQArNsIfVECwghmCVmeeNdOFOHEi5eXaSTrCAGIIFxBAsIIZgATEEC4ghWEAMwQJiCBYQQ7CAGIIFxBAsIIZgATEEC4ghWEAMwQJiCBYQQ7CAGIIFxBAsIIZgATEEC4ghWEAMwQJiCBYQQ7CAGIIFxBAsIIZgATEEq8z9/f3oLfy1cCcOpNw8O0knWEAMwao0wxtpyR4cSKEZ9rAaggXEEKxiY99OC1d3ICtYfX0Eq96o12j5ug4kdN0VE6wm+r9SG63oQIJW3ILbl5c/o/ewZrvdrvUSfS4MB3I+qWpHsHpodJH0vzAcyGlS1ZpgATE8wwJiCBYQQ7CAGIIFxBAsIIZgATEEC4ghWEAMwQJiCBYQQ7CAGIIFxBAsIIZgATEEC4ghWEAMwQJiCBYQQ7CAGN9Hb2ATVvOVB09Pv1r82MfHny1+7AmrOSNb40so2lrNl0o1StWxPtlazRnZJsFqpcOFcazdRdIhVcfaZWs1Z2TLPMNqovO10W7FzrVqt+JqzsjGCVa9Ua/U8nX716rRuqs5IwhWsbGv0cLVR9WqfPXVnBFuBAsIIliVZng7LdnD2PGqcA+rOSPsCRYQQ7DKzPNGunAnM4xXewt3spozwoFgATEEC4ghWIzx+Piz/58Qkk6wGOCQKs3iIoJFb28ipVmcT7CAGIJFV+YplhAs+vmwVvN87Iv5CRYjqRUXESw6eT9eqRWXEiyucemnqNSKEoLFxS79FJUH7VQRLC5z6aeoPGinkGDRkFpRS7C4zPvcfDZkqRXlBIuLndMstaIFweIaT0+/3tTny4dZasVygsX1PmuWDzHQiGCxyPtmqRXtCBZL6RHdCBYFTjRLzigkWDSkVtQSLGq8b5NaUU6wKHMo1PsPPUCJ76M3wKroFE2ZsIAYggXEECwghmCVub+/H72FvxbuZJ7/t7dwJ6s5IxwIFhBDsCrN8EZasocZhqySPazmjLAnWEAMwSo29u20cPWxQ1bh6qs5I9wIVgujXqPl645qVvm6qzkjCFYT/V+pjVbs36xGK67mjGzc7cvLn9F7WLPdbtd6iT4XRoe/uekTx9WckW0SrB4aXST9L4xG2eo/x63mjGyNYAExPMMCYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBjfR29gE1bzlQer+RKKh4eHFj/2+fm5xY/lwJdQtLWaL5Vazdd8NUrVMdlqR7Ba6ZCqY+2y1SFVx9plq0OqjslWC55hNdG5Vu1W7Fyrdit2rtWQFbdAsOr1r1WjdfvXqtG6o9qhWeUEq9ioWpWvPqpW5auPrYZm1RIsIIZgVRo7XhXuYex4VbiHGQacGfawGoIFxBCsMjOMV3sLdzLDeLW3cCfzjDbz7CSdYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYggWEEOwgBiCBcQQLCCGYAExBAuIIVhADMECYghWmfv7+9Fb+GvhTh4ff1btZKGFO3l+fq7ayULz7CSdYAExBKvSDENWyR5mGLJK9jDDaDPDHlZDsIAYglVs7JBVuPrYIatw9bEDjvGqlmDVG9Ws8nVHNat83VHVUKtygtVE/2Y1WrF/sxqt2L8datXC7cvLn9F7WLPdbtd6iT5xfHr61XqJPnF8eHhovYRUtSNYPTTKVv85rlG2+s9xjbIlVa0JFhDDMywghmABMQQLiCFYQAzBAmIIFhBDsIAYggXEECwghmABMQQLiCFYQAzBAmIIFhBDsIAYggXEECwghmABMQQLiCFYQAzBAmIIFhBDsIAYggXEECwghmABMQQLiCFYQAzBAmIIFhDj293dj9F7ADiLCQuIIVhADMECYggWEEOwgBiCBcT4dnNz45MNwPzu7n6YsIAYggXEECwgxt9geYwFzGzfKBMWEEOwgBiCBcT4L1geYwFzOtTJhAXEECwgxv+C5a4QmM1xl0xYQAzBAmK8DZa7QmAeb4pkwgJiCBYQ44NguSsEZvC+RSYsIMbHwTJkAWN9WCETFhDj02AZsoBRPuuPCQuIcSpYhiygvxPlMWEBMb4IliEL6Ol0c0xYQIyvg2XIAvr4sjYmLCDGWcEyZAGtndOZcycszQLaObMwbgmBGBcEy5AFtHB+Wy6bsDQLqHVRVdwSAjEuDpYhC6hyaU+umbA0C1juipJceUuoWcAS1zXEMywgxvXBMmQB17m6HosmLM0CLrWkG0tvCTULON/CYhQ8w9Is4BzLW1Hz0F2zgNNKKlH2W0LNAj5T1YfKjzVoFvBeYRmKP4elWcCx2ibUf3BUs4C98ho0+aS7ZgEtOtDqT3M0C7asUQEa/i2hZsE2tbv22/7xs2bB1jS96pv/twbNgu1ofb3fvr6+Nl3g4Pfvf/osBPTXZzTp9/+wjFqwVt2u7q7/wE+zYH16Xtf9bgmPuT2EFeg/goz5F8lGLUg35CoeM2EdGLUgzsCBY/CXUBi1IMvYa3bwhHVg1ILJzTBezBKsPdmCCc2Qqr25grUnWzCJeVK1N2Ow9mQLBpotVXvzBmtPtqCzOVO1N3uw9mQLOpg5VXsZwTpQLig3f6cOwoJ1oFywUFCnDlKDdaBccJHETh3EB+uYeMGHoiN1bFXBOiZebNxqInXsXzwLpEib4mBTAAAAAElFTkSuQmCC" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20width%3D%22400%22%20height%3D%22400%22%20viewBox%3D%220%200%20400%20400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20width%3D%22400%22%20height%3D%22400%22%20rx%3D%2288%22%20fill%3D%22%23F5F5F7%22%2F%3E%3Cg%3E%3Crect%20x%3D%22110%22%20y%3D%22110%22%20width%3D%2246%22%20height%3D%2246%22%20rx%3D%2212%22%20fill%3D%22%23E0E0E2%22%2F%3E%3Crect%20x%3D%22177%22%20y%3D%22110%22%20width%3D%2246%22%20height%3D%2246%22%20rx%3D%2212%22%20fill%3D%22%23E0E0E2%22%2F%3E%3Crect%20x%3D%22244%22%20y%3D%22110%22%20width%3D%2246%22%20height%3D%2246%22%20rx%3D%2212%22%20fill%3D%22%23E0E0E2%22%2F%3E%3Crect%20x%3D%22110%22%20y%3D%22177%22%20width%3D%2246%22%20height%3D%2246%22%20rx%3D%2212%22%20fill%3D%22%23E0E0E2%22%2F%3E%3Crect%20x%3D%22177%22%20y%3D%22177%22%20width%3D%2246%22%20height%3D%2246%22%20rx%3D%2212%22%20fill%3D%22%238E8E93%22%2F%3E%3Crect%20x%3D%22244%22%20y%3D%22177%22%20width%3D%2246%22%20height%3D%2246%22%20rx%3D%2212%22%20fill%3D%22%23E0E0E2%22%2F%3E%3Crect%20x%3D%22110%22%20y%3D%22244%22%20width%3D%2246%22%20height%3D%2246%22%20rx%3D%2212%22%20fill%3D%22%23E0E0E2%22%2F%3E%3Crect%20x%3D%22177%22%20y%3D%22244%22%20width%3D%2246%22%20height%3D%2246%22%20rx%3D%2212%22%20fill%3D%22%238E8E93%22%2F%3E%3Crect%20x%3D%22244%22%20y%3D%22244%22%20width%3D%2246%22%20height%3D%2246%22%20rx%3D%2212%22%20fill%3D%22%232C2C2E%22%2F%3E%3C%2Fg%3E%3Cpath%20d%3D%22M190%20200%20L198%20208%20L212%20192%22%20stroke%3D%22%23F5F5F7%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20fill%3D%22none%22%2F%3E%3C%2Fsvg%3E" />
+<link rel="manifest" href="./manifest.json" />
+<meta name="theme-color" content="#171717" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,500&display=swap" rel="stylesheet">
+<style>
+  :root[data-theme="light"] {
+    --bg:#fbfbf9; --bg-glow: radial-gradient(ellipse 900px 500px at 50% -8%, rgba(0,0,0,0.035), transparent 60%);
+    --card:#ffffff; --border:#eae9e5; --border-light:#f2f1ee;
+    --ink:#171717; --muted:#87857f; --faint:#b3b1aa; --very-faint:#dedcd5;
+    --accent:#171717; --on-accent:#ffffff;
+    --pat-deep:#171717;
+    --pat-rem-bg:#171717; --pat-rem-stripe: rgba(255,255,255,.55);
+    --pat-light-bg:#c9c7c0; --pat-light-dot: rgba(255,255,255,.75);
+    --heat-l1:#e3e1da; --heat-l2:#b3b1aa; --heat-l3:#78766f; --heat-l4:#171717;
+    --shadow-xs: 0 1px 1px rgba(23,23,20,0.03);
+    --shadow-sm: 0 1px 2px rgba(23,23,20,0.04), 0 1px 1px rgba(23,23,20,0.03);
+    --shadow-card: 0 1px 2px rgba(23,23,20,0.03), 0 6px 16px -8px rgba(23,23,20,0.08), 0 16px 32px -20px rgba(23,23,20,0.10);
+    --shadow-pressed: inset 0 1px 3px rgba(23,23,20,0.14);
+    --shadow-ring: 0 0 0 5px rgba(23,23,20,0.06);
+    --shadow: var(--shadow-sm);
+  }
+  :root[data-theme="dark"] {
+    --bg:#0c0c0b; --bg-glow: radial-gradient(ellipse 900px 500px at 50% -8%, rgba(255,255,255,0.035), transparent 60%);
+    --card:#1a1a18; --border:#2e2e2b; --border-light:#232320;
+    --ink:#f3f2ee; --muted:#9c9a93; --faint:#6f6d67; --very-faint:#3a3a36;
+    --accent:#f3f2ee; --on-accent:#0c0c0b;
+    --pat-deep:#f3f2ee;
+    --pat-rem-bg:#f3f2ee; --pat-rem-stripe: rgba(12,12,11,.55);
+    --pat-light-bg:#535250; --pat-light-dot: rgba(12,12,11,.6);
+    --heat-l1:#282825; --heat-l2:#4b4a46; --heat-l3:#7c7a73; --heat-l4:#f3f2ee;
+    --shadow-xs: 0 1px 1px rgba(0,0,0,0.2);
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.25);
+    --shadow-card: 0 1px 0 rgba(255,255,255,0.03) inset, 0 8px 20px -10px rgba(0,0,0,0.5);
+    --shadow-pressed: inset 0 1px 3px rgba(0,0,0,0.5);
+    --shadow-ring: 0 0 0 5px rgba(243,242,238,0.06);
+    --shadow: none;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--ink);
+    background-image: var(--bg-glow);
+    background-attachment: fixed;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased; min-height: 100vh;
+    transition: background-color 0.25s, color 0.25s;
+  }
+  #root { max-width: 460px; margin: 0 auto; padding: 0 0 60px; }
+
+  /* header */
+  .hero { padding: 34px 20px 22px; display:flex; align-items:flex-end; justify-content:space-between; gap:16px; }
+  .hero-eyebrow { font-size:12px; color:var(--faint); margin:0 0 7px; text-transform:lowercase; letter-spacing:.02em; }
+  .hero-date { font-family:"Fraunces",serif; font-style:italic; font-weight:500; font-size:32px; line-height:1.05; margin:0; letter-spacing:-0.015em; text-transform:capitalize; }
+  .hero-right { display:flex; flex-direction:column; align-items:flex-end; gap:12px; }
+  .theme-switch { flex-shrink:0; width:52px; height:30px; border-radius:999px; background:var(--border-light); border:1px solid var(--border); cursor:pointer; position:relative; padding:0; box-shadow: var(--shadow-pressed); transition: background .2s; }
+  .theme-switch .knob { position:absolute; top:2px; left:2px; width:24px; height:24px; border-radius:50%; background:var(--card); box-shadow: var(--shadow-card); transition: transform .3s cubic-bezier(.34,1.4,.64,1); display:flex; align-items:center; justify-content:center; color:var(--ink); }
+  :root[data-theme="dark"] .theme-switch .knob { transform: translateX(22px); }
+  .week-strip { display:flex; gap:5px; }
+  .week-dot { width:8px; height:8px; border-radius:50%; background:var(--border-light); transition: background .2s; }
+  .week-dot.done { background:var(--ink); }
+  .week-dot.today { border:1.5px solid var(--ink); background:transparent; box-sizing:border-box; width:7px; height:7px; }
+
+  /* tabs */
+  .tabs-wrap { padding: 0 20px; margin-bottom: 6px; position: sticky; top:0; background:var(--bg); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); z-index:10; transition: background .2s; }
+  .tabs { display:flex; gap:6px; border-bottom:1px solid var(--border-light); padding: 4px 0 0; }
+  .tab-btn { background:none; border:none; font-family:inherit; cursor:pointer; font-size:13.5px; color:var(--faint); padding:8px 14px 12px; position:relative; transition:color .15s; border-radius: 10px 10px 0 0; }
+  .tab-btn.active { color:var(--ink); font-weight:600; }
+  .tab-underline { position:absolute; bottom:-1px; left:14px; right:14px; height:2.5px; border-radius: 2px 2px 0 0; background:var(--ink); transition: opacity .2s; }
+  .tab-underline.hist { transform: translateX(0); }
+
+  section { margin: 0; }
+  .section-pad { padding: 28px 20px 10px; }
+  .section-pad-row { padding: 28px 20px 10px; display:flex; align-items:center; justify-content:space-between; gap:10px; }
+  .section-label { font-size:11px; font-weight:600; color:var(--faint); text-transform:uppercase; letter-spacing:.1em; margin:0; }
+  .count-line { font-size:12.5px; color:var(--faint); margin: 5px 0 0; }
+  .sub-note { font-size:12.5px; color:var(--faint); margin: 4px 0 0; }
+  .empty { padding: 30px 20px; text-align:center; font-size:14px; color:var(--faint); }
+
+  .select-mini { font-family:inherit; font-size:12px; color:var(--ink); background:var(--card); border:1px solid var(--border); border-radius:9px; padding:6px 11px; box-shadow: var(--shadow-xs); }
+
+  /* HOY: open habit list */
+  .habit-list { padding: 4px 14px 0; }
+  .habit-row-open { display:flex; align-items:center; gap:14px; padding: 13px 6px; margin: 0 0 2px; border-radius: 14px; cursor:pointer; transition: background .15s; }
+  .habit-row-open:active { background: var(--border-light); }
+  .circle-check { flex-shrink:0; width: 27px; height:27px; border-radius:50%; border: 1.5px solid var(--very-faint); background: var(--card); box-shadow: var(--shadow-xs); display:flex; align-items:center; justify-content:center; transition: background .18s, border-color .18s, transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .18s; color: transparent; }
+  .circle-check.checked { background: var(--ink); border-color: var(--ink); color: var(--on-accent); transform: scale(1.06); box-shadow: var(--shadow-ring); }
+  .habit-name-open { flex:1; font-size:15.5px; color:var(--ink); min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .habit-name-open.done { color:var(--faint); text-decoration: line-through; text-decoration-color: var(--very-faint); }
+  .streak-mini { font-size:11px; color:var(--faint); white-space:nowrap; flex-shrink:0; }
+  .row-actions { display:flex; align-items:center; gap:2px; flex-shrink:0; }
+  .icon-btn { background:none; border:none; color:var(--very-faint); cursor:pointer; padding:6px; border-radius:8px; display:flex; align-items:center; justify-content:center; transition: background .15s, color .15s; }
+  .icon-btn:hover { color:var(--muted); background: var(--border-light); }
+  .chevron { transition: transform 0.2s; }
+  .chevron.open { transform: rotate(180deg); }
+
+  .add-row-open { padding: 12px 20px 6px; display:flex; align-items:center; gap:12px; }
+  .add-row-open input { flex:1; background:transparent; border:none; font-size:15px; color:var(--ink); outline:none; font-family:inherit; padding:6px 0; }
+  .add-row-open input::placeholder { color: var(--faint); }
+  .add-row-open .plus-circ { flex-shrink:0; width:27px; height:27px; border-radius:50%; border:1.5px dashed var(--very-faint); display:flex; align-items:center; justify-content:center; color:var(--faint); background:var(--card); cursor:pointer; transition: border-color .15s, color .15s, transform .15s; }
+  .add-row-open .plus-circ:active { transform: scale(.92); }
+  .add-row-open .flex-label { flex:1; font-size:15px; color:var(--faint); padding:6px 0; }
+  .flex-habit-panel { padding: 12px 20px 18px; }
+  .flex-habit-panel input { width:100%; background:var(--bg); border:1px solid var(--border-light); border-radius:12px; padding:11px 13px; font-size:14px; color:var(--ink); outline:none; font-family:inherit; margin-bottom:12px; box-sizing:border-box; transition: border-color .15s; }
+  .flex-habit-panel input:focus { border-color: var(--faint); }
+  .day-picker { display:flex; gap:6px; margin-bottom:14px; }
+  .day-chip { flex:1; text-align:center; padding:9px 0; border-radius:10px; border:1px solid var(--border); background:var(--card); color:var(--muted); font-size:12px; font-family:inherit; cursor:pointer; transition: all .15s; }
+  .day-chip.active { background:var(--ink); color:var(--on-accent); border-color:var(--ink); font-weight:600; box-shadow: var(--shadow-sm); }
+  .habit-row-open.inactive-today { opacity:.45; }
+  .circle-check.disabled { cursor:default; }
+  .flex-days-badge { font-size:10px; color:var(--faint); white-space:nowrap; flex-shrink:0; }
+
+  .cal-panel-open { padding: 4px 0 16px; }
+
+  /* heatmap teaser on Hoy */
+  .heat-teaser { padding: 26px 20px 6px; }
+  .heat-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .heat-grid { display:flex; gap:3.5px; width:max-content; }
+  .heat-col { display:flex; flex-direction:column; gap:3.5px; }
+  .heat-cell { width:9px; height:9px; border-radius:3px; background:var(--border-light); }
+  .heat-cell.l1 { background:var(--heat-l1); }
+  .heat-cell.l2 { background:var(--heat-l2); }
+  .heat-cell.l3 { background:var(--heat-l3); }
+  .heat-cell.l4 { background:var(--heat-l4); }
+  .heat-cell.done { background:var(--ink); }
+  .heat-legend { display:flex; align-items:center; gap:5px; margin-top:12px; font-size:10px; color:var(--faint); }
+  .heat-legend .heat-cell { width:8px; height:8px; }
+
+  /* quiet cards */
+  .card-quiet { background:var(--card); border:1px solid var(--border-light); border-radius:18px; padding: 6px 18px; margin: 0 20px; box-shadow: var(--shadow-card); }
+  .card-quiet-pad { padding: 20px; margin: 0 20px; background:var(--card); border:1px solid var(--border-light); border-radius:18px; box-shadow: var(--shadow-card); }
+  .stat-row { display:flex; align-items:center; justify-content:space-between; padding:13px 0; border-bottom:1px solid var(--border-light); gap:10px; }
+  .stat-row:last-child { border-bottom:none; }
+  .stat-label { font-size:13px; color:var(--muted); }
+  .stat-value { font-size:15px; font-weight:600; color:var(--ink); white-space:nowrap; }
+  .stat-value.muted-val { color: var(--faint); font-weight:500; }
+  .date-input-mini { font-family:inherit; font-size:12px; color:var(--ink); background:var(--bg); border:1px solid var(--border); border-radius:9px; padding:6px 10px; }
+
+  /* sleep entry fields */
+  .field-row-mini { display:flex; gap:10px; margin-bottom: 12px; }
+  .field-mini { flex:1; min-width:0; }
+  .field-mini label { display:block; font-size:11px; color:var(--faint); margin-bottom:5px; }
+  .field-mini input, select.select-full { width:100%; font-family:inherit; background: var(--bg); border:1px solid var(--border-light); border-radius:10px; padding: 9px 10px; font-size:13px; color: var(--ink); outline:none; transition: border-color .15s; }
+  .field-mini input:focus { border-color: var(--faint); }
+  .field-mini input::placeholder { color: var(--very-faint); }
+  .field-row-2 { display:flex; gap:10px; margin-bottom:14px; }
+  .save-row { display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap; }
+  .save-btn { background: var(--ink); color: var(--on-accent); border:none; border-radius:12px; padding:11px 20px; font-size:13px; font-weight:600; cursor:pointer; font-family:inherit; box-shadow: var(--shadow-sm); transition: transform .12s; }
+  .save-btn:active { transform: scale(.97); }
+  .save-msg { font-size:12px; color:var(--faint); }
+  .save-warn { font-size:12px; color:#c2410c; margin:8px 0 0; font-weight:600; }
+
+  /* sleep chart */
+  .chart-title { font-size:11px; font-weight:600; color:var(--faint); text-transform:uppercase; letter-spacing:.1em; margin:0 0 16px; }
+  .chart-wrap { margin-top: 4px; }
+  .chart { display:flex; align-items:flex-end; gap:8px; height:150px; padding-top:8px; border-top:1px solid var(--border-light); }
+  .bar-col { flex:1; display:flex; flex-direction:column; align-items:center; height:100%; justify-content:flex-end; gap:6px; }
+  .bar-total { font-size:9px; color:var(--faint); font-weight:600; }
+  .bar-stack { width:100%; max-width:24px; display:flex; flex-direction:column-reverse; border-radius:7px 7px 3px 3px; overflow:hidden; background:var(--border-light); min-height:2px; }
+  .bar-deep { background: var(--pat-deep); }
+  .bar-rem { background-color: var(--pat-rem-bg); background-image: repeating-linear-gradient(45deg, transparent 0 3px, var(--pat-rem-stripe) 3px 6px); }
+  .bar-light { background-color: var(--pat-light-bg); background-image: radial-gradient(var(--pat-light-dot) 1px, transparent 1.2px); background-size: 6px 6px; }
+  .bar-other { background: var(--border-light); }
+  .bar-label { font-size:10px; color:var(--faint); }
+  .legend { display:flex; gap:14px; margin-top:14px; flex-wrap:wrap; justify-content:center; }
+  .legend-item { display:flex; align-items:center; gap:6px; font-size:11px; color:var(--muted); }
+  .swatch { width:12px; height:12px; border-radius:3px; }
+  .sw-deep { background: var(--pat-deep); }
+  .sw-rem  { background-color: var(--pat-rem-bg); background-image: repeating-linear-gradient(45deg, transparent 0 2px, var(--pat-rem-stripe) 2px 4px); }
+  .sw-light{ background-color: var(--pat-light-bg); background-image: radial-gradient(var(--pat-light-dot) .8px, transparent 1px); background-size:5px 5px; }
+
+  /* HISTORIAL: habit month calendar + heatmap */
+  .habit-block { padding: 20px 20px 24px; border-bottom: 1px solid var(--border-light); }
+  .habit-block:last-child { border-bottom:none; }
+  .habit-block-head { display:flex; align-items:center; justify-content:space-between; margin-bottom:13px; gap:10px; flex-wrap:wrap; }
+  .habit-block-name { font-size:15px; font-weight:600; }
+  .cal-grid { display:grid; grid-template-columns: repeat(7,1fr); gap:5px; margin-bottom:16px; }
+  .cal-cell { aspect-ratio:1; border-radius:9px; background:var(--bg); border:1px solid var(--border-light); display:flex; align-items:center; justify-content:center; font-size:10px; color:var(--faint); }
+  .cal-cell.done { background:var(--ink); color: var(--on-accent); border-color:var(--ink); font-weight:600; box-shadow: var(--shadow-sm); }
+  .heat-toggle-row { display:flex; align-items:center; justify-content:space-between; margin-bottom:10px; cursor:pointer; }
+  .heat-toggle-row p { margin:0; font-size:11px; color:var(--faint); text-transform:uppercase; letter-spacing:.08em; }
+  .chev { color:var(--faint); transition: transform .2s; display:inline-flex; }
+  .chev.open { transform: rotate(180deg); }
+
+  /* correlation bars */
+  .corr-bar-row { margin-bottom: 16px; }
+  .corr-bar-row:last-child { margin-bottom:0; }
+  .corr-bar-label { display:flex; justify-content:space-between; font-size:12px; color:var(--muted); margin-bottom:7px; gap:8px; }
+  .corr-bar-track { height:8px; background:var(--border-light); border-radius:5px; overflow:hidden; }
+  .corr-bar-fill { height:100%; background:var(--ink); border-radius:5px; }
+  .corr-bar-fill.striped { background-color: var(--pat-rem-bg); background-image: repeating-linear-gradient(45deg, transparent 0 3px, var(--pat-rem-stripe) 3px 6px); }
+
+  .btn-quiet { width:100%; background:var(--card); border:1px solid var(--border); color:var(--ink); border-radius:13px; padding:12px 16px; font-size:14px; font-weight:600; cursor:pointer; text-align:center; font-family:inherit; margin-bottom:8px; box-shadow: var(--shadow-xs); transition: transform .12s; }
+  .btn-quiet:active { transform: scale(.98); }
+  .btn-quiet:last-of-type { margin-bottom:0; }
+
+  /* CALENDARIO */
+  .cal-nav { display:flex; align-items:center; justify-content:space-between; padding: 8px 20px 16px; }
+  .cal-month-label { font-size:15px; font-weight:600; text-transform:capitalize; }
+  .gcal-grid { display:grid; grid-template-columns: repeat(7,1fr); gap:4px; padding:0 20px; }
+  .gcal-dow { font-size:10px; color:var(--faint); text-align:center; padding-bottom:9px; text-transform:uppercase; letter-spacing:.05em; }
+  .gcal-cell { aspect-ratio:1; border-radius:12px; display:flex; flex-direction:column; align-items:center; justify-content:center; cursor:pointer; gap:3px; border:1.5px solid transparent; font-size:13px; color:var(--ink); transition: background .15s, transform .12s; }
+  .gcal-cell:active { transform: scale(.93); }
+  .gcal-cell.other-month { color:var(--very-faint); }
+  .gcal-cell.today { border-color:var(--very-faint); font-weight:700; }
+  .gcal-cell.selected { background:var(--ink); color:var(--on-accent); border-color:var(--ink); box-shadow: var(--shadow-sm); }
+  .gcal-dot-row { display:flex; gap:2px; height:4px; }
+  .gcal-dot { width:4px; height:4px; border-radius:50%; background:var(--muted); }
+  .gcal-cell.selected .gcal-dot { background:var(--on-accent); }
+  .agenda-item { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:11px 0; border-bottom:1px solid var(--border-light); }
+  .agenda-item:last-of-type { border-bottom:none; }
+  .agenda-text { font-size:14px; color:var(--ink); }
+
+  .sched-timeline-wrap { max-height: 420px; overflow-y: auto; -webkit-overflow-scrolling:touch; border-top:1px solid var(--border-light); border-bottom:1px solid var(--border-light); border-radius: 10px; }
+  .sched-timeline { position:relative; display:flex; }
+  .sched-hours { width:46px; flex-shrink:0; position:relative; }
+  .sched-hour-label { position:absolute; right:8px; transform:translateY(-6px); font-size:10px; color:var(--faint); white-space:nowrap; }
+  .sched-lane { position:relative; flex:1; border-left:1px solid var(--border-light); }
+  .sched-hline { position:absolute; left:0; right:0; border-top:1px solid var(--border-light); }
+  .sched-now-line { position:absolute; left:0; right:0; height:0; border-top:1.5px solid var(--ink); z-index:3; }
+  .sched-now-dot { position:absolute; left:-4px; top:-4px; width:8px; height:8px; border-radius:50%; background:var(--ink); box-shadow: var(--shadow-ring); }
+  .sched-block { position:absolute; border-radius:10px; padding:6px 9px; overflow:hidden; display:flex; flex-direction:column; gap:1px; cursor:default; box-shadow: var(--shadow-sm); transition: transform .12s; }
+  .sched-block:active { transform: scale(.98); }
+  .sched-block-time { font-size:9px; font-weight:600; opacity:.85; white-space:nowrap; }
+  .sched-block-text { font-size:11.5px; font-weight:500; line-height:1.2; overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; }
+  .sched-block-del { position:absolute; top:2px; right:2px; background:none; border:none; padding:3px; cursor:pointer; opacity:0; transition:opacity .12s; color:inherit; display:flex; }
+  .sched-block:hover .sched-block-del { opacity:.75; }
+  .sched-block.pat-1 { background: var(--ink); color: var(--on-accent); }
+  .sched-block.pat-2 { background-color: var(--pat-rem-bg); background-image: repeating-linear-gradient(45deg, transparent 0 4px, var(--pat-rem-stripe) 4px 8px); color: var(--on-accent); }
+  .sched-block.pat-3 { background-color: var(--pat-light-bg); background-image: radial-gradient(var(--pat-light-dot) 1.2px, transparent 1.4px); background-size:7px 7px; color: var(--ink); }
+  .sched-block.pat-4 { background: var(--card); border:1.5px solid var(--ink); background-image: repeating-linear-gradient(90deg, var(--border) 0 1px, transparent 1px 7px); color: var(--ink); }
+  .sched-block.pat-5 { background: var(--card); border:1.5px dashed var(--faint); background-image: repeating-linear-gradient(0deg, var(--border-light) 0 1px, transparent 1px 6px); color: var(--ink); }
+  .sched-add-row { display:flex; gap:8px; }
+  .sched-add-row .field-mini { flex:1; }
+  .sched-recur-row { display:flex; align-items:center; gap:8px; margin-top:10px; font-size:12px; color:var(--muted); cursor:pointer; }
+  .sched-recur-row input[type="checkbox"] { accent-color: var(--ink); width:15px; height:15px; }
+  .sched-block.rec-badge::after { content:"↻"; position:absolute; bottom:2px; right:4px; font-size:9px; opacity:.8; }
+  .recurring-list { margin-top:14px; padding-top:14px; border-top:1px solid var(--border-light); }
+  .recurring-item { display:flex; align-items:center; justify-content:space-between; gap:8px; padding:8px 0; border-bottom:1px solid var(--border-light); }
+  .recurring-item:last-child { border-bottom:none; }
+  .recurring-item-text { font-size:13px; color:var(--ink); }
+  .recurring-item-days { font-size:11px; color:var(--faint); }
+
+  /* habit notes */
+  .habit-note-panel { padding: 6px 20px 18px; }
+  .habit-note-panel textarea { width:100%; background:var(--bg); border:1px solid var(--border-light); border-radius:12px; padding:11px 13px; font-size:13px; color:var(--ink); outline:none; font-family:inherit; resize:vertical; min-height:60px; box-sizing:border-box; transition: border-color .15s; }
+  .habit-note-panel textarea:focus { border-color: var(--faint); }
+  .note-indicator { width:6px; height:6px; border-radius:50%; background:var(--faint); flex-shrink:0; }
+
+  /* pause habit */
+  .habit-row-open.paused { opacity:.5; }
+  .pause-badge { font-size:10px; color:var(--faint); border:1px solid var(--border); border-radius:7px; padding:2px 7px; white-space:nowrap; flex-shrink:0; }
+
+  /* editable agenda / schedule */
+  .agenda-edit-input { flex:1; background:transparent; border:none; border-bottom:1px solid var(--border); font-size:14px; color:var(--ink); outline:none; font-family:inherit; padding:2px 0; }
+  .sched-block { cursor:pointer; }
+
+  footer { text-align: center; font-size: 11px; color: var(--very-faint); padding: 36px 20px 4px; letter-spacing:.01em; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+
+<script type="text/babel" data-presets="react">
+const { useState, useEffect, useMemo, useRef } = React;
+
+const MONTH_NAMES = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+const DAY_NAMES = ["dom","lun","mar","mié","jue","vie","sáb"];
+const DAY_NAMES_MON = ["lun","mar","mié","jue","vie","sáb","dom"];
+
+function calendarMonthGrid(year, monthIdx) {
+  const firstDay = new Date(year, monthIdx, 1);
+  const startDow = firstDay.getDay();
+  const daysSinceMonday = startDow === 0 ? 6 : startDow - 1;
+  const cursor = new Date(year, monthIdx, 1 - daysSinceMonday);
+  const cells = [];
+  for (let i = 0; i < 42; i++) {
+    cells.push({
+      dateStr: `${cursor.getFullYear()}-${pad(cursor.getMonth() + 1)}-${pad(cursor.getDate())}`,
+      day: cursor.getDate(),
+      inMonth: cursor.getMonth() === monthIdx,
+    });
+    cursor.setDate(cursor.getDate() + 1);
+  }
+  return cells;
+}
+
+function pad(n) { return String(n).padStart(2, "0"); }
+function todayKey() {
+  const d = new Date();
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+}
+function dayLabel(dateStr, todayStr) {
+  const [y, m, d] = dateStr.split("-").map(Number);
+  const date = new Date(y, m - 1, d);
+  const [ty, tm, td] = todayStr.split("-").map(Number);
+  const today = new Date(ty, tm - 1, td);
+  const diff = Math.round((today - date) / 86400000);
+  if (diff === 0) return "Hoy";
+  return DAY_NAMES[date.getDay()];
+}
+function last7Days(todayStr) {
+  const [y, m, d] = todayStr.split("-").map(Number);
+  const base = new Date(y, m - 1, d);
+  const days = [];
+  for (let i = 6; i >= 0; i--) {
+    const dt = new Date(base);
+    dt.setDate(base.getDate() - i);
+    days.push(`${dt.getFullYear()}-${pad(dt.getMonth() + 1)}-${pad(dt.getDate())}`);
+  }
+  return days;
+}
+function monthKeyOf(year, monthIdx) { return `${year}-${pad(monthIdx + 1)}`; }
+function parseMonthKey(key) {
+  const [y, m] = key.split("-").map(Number);
+  return { year: y, monthIdx: m - 1 };
+}
+function monthLabel(key) {
+  const { year, monthIdx } = parseMonthKey(key);
+  const name = MONTH_NAMES[monthIdx];
+  return name.charAt(0).toUpperCase() + name.slice(1) + " " + year;
+}
+function monthOptions() {
+  const now = new Date();
+  const opts = [];
+  for (let i = 0; i < 12; i++) {
+    const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
+    opts.push(monthKeyOf(d.getFullYear(), d.getMonth()));
+  }
+  return opts;
+}
+function daysInMonth(year, monthIdx) { return new Date(year, monthIdx + 1, 0).getDate(); }
+
+function isDayActive(date, activeDays) {
+  // Un array de días vacío (dato corrupto, p.ej. de un backup importado a mano)
+  // se trata como "sin restricción" para no dejar prevActiveDate/nextActiveDate en loop infinito.
+  return !activeDays || activeDays.length === 0 || activeDays.includes(date.getDay());
+}
+function prevActiveDate(date, activeDays) {
+  const d = new Date(date);
+  d.setDate(d.getDate() - 1);
+  while (!isDayActive(d, activeDays)) d.setDate(d.getDate() - 1);
+  return d;
+}
+function nextActiveDate(date, activeDays) {
+  const d = new Date(date);
+  d.setDate(d.getDate() + 1);
+  while (!isDayActive(d, activeDays)) d.setDate(d.getDate() + 1);
+  return d;
+}
+function daysLabel(days) {
+  if (!days) return null;
+  const order = [1, 2, 3, 4, 5, 6, 0];
+  const short = { 1: "L", 2: "M", 3: "X", 4: "J", 5: "V", 6: "S", 0: "D" };
+  return order.filter((d) => days.includes(d)).map((d) => short[d]).join(" ");
+}
+
+function computeStreak(habit, completions, todayStr) {
+  const habitId = habit.id;
+  const activeDays = habit.days || null;
+  const [ty, tm, td] = todayStr.split("-").map(Number);
+  let cursor = new Date(ty, tm - 1, td);
+  const key = (d) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+  let count = 0;
+  if (isDayActive(cursor, activeDays)) {
+    if (!(completions[key(cursor)] || []).includes(habitId)) {
+      cursor = prevActiveDate(cursor, activeDays);
+    }
+  } else {
+    cursor = prevActiveDate(cursor, activeDays);
+  }
+  while ((completions[key(cursor)] || []).includes(habitId)) {
+    count++;
+    cursor = prevActiveDate(cursor, activeDays);
+  }
+  return count;
+}
+
+function computeBestStreak(habit, completions) {
+  const habitId = habit.id;
+  const activeDays = habit.days || null;
+  const dates = Object.keys(completions).filter((k) => (completions[k] || []).includes(habitId)).sort();
+  let best = 0, current = 0, prevDate = null;
+  for (const dateStr of dates) {
+    const [y, m, d] = dateStr.split("-").map(Number);
+    const dt = new Date(y, m - 1, d);
+    if (prevDate) {
+      const expected = nextActiveDate(prevDate, activeDays);
+      const sameDay = expected.getFullYear() === dt.getFullYear() && expected.getMonth() === dt.getMonth() && expected.getDate() === dt.getDate();
+      current = sameDay ? current + 1 : 1;
+    } else {
+      current = 1;
+    }
+    if (current > best) best = current;
+    prevDate = dt;
+  }
+  return best;
+}
+function currentWeekDates(todayStr) {
+  const [ty, tm, td] = todayStr.split("-").map(Number);
+  const today = new Date(ty, tm - 1, td);
+  const dow = today.getDay();
+  const daysSinceMonday = dow === 0 ? 6 : dow - 1;
+  const monday = new Date(today);
+  monday.setDate(today.getDate() - daysSinceMonday);
+  const days = [];
+  const cursor = new Date(monday);
+  while (cursor <= today) {
+    days.push(`${cursor.getFullYear()}-${pad(cursor.getMonth() + 1)}-${pad(cursor.getDate())}`);
+    cursor.setDate(cursor.getDate() + 1);
+  }
+  return days;
+}
+function fullWeekDatesContaining(dateStr) {
+  const [ty, tm, td] = dateStr.split("-").map(Number);
+  const d = new Date(ty, tm - 1, td);
+  const dow = d.getDay();
+  const daysSinceMonday = dow === 0 ? 6 : dow - 1;
+  const monday = new Date(d);
+  monday.setDate(d.getDate() - daysSinceMonday);
+  const days = [];
+  const cursor = new Date(monday);
+  for (let i = 0; i < 7; i++) {
+    days.push(`${cursor.getFullYear()}-${pad(cursor.getMonth() + 1)}-${pad(cursor.getDate())}`);
+    cursor.setDate(cursor.getDate() + 1);
+  }
+  return days;
+}
+
+function timeToMinutes(t) {
+  if (!t) return null;
+  const [h, m] = t.split(":").map(Number);
+  if (isNaN(h) || isNaN(m)) return null;
+  return h * 60 + m;
+}
+function minutesToTime(mins) {
+  if (mins === null) return "—";
+  const m = Math.round(mins) % (24 * 60);
+  const h = Math.floor(m / 60);
+  const mm = m % 60;
+  return `${pad(h)}:${pad(mm)}`;
+}
+
+const DEFAULT_HABITS = [
+  { id: "h1", name: "Beber 2L de agua" },
+  { id: "h2", name: "Leer 20 minutos" },
+  { id: "h3", name: "Estirar / mover el cuerpo" },
+];
+
+function loadJSON(key, fallback) {
+  try {
+    const raw = localStorage.getItem(key);
+    return raw ? JSON.parse(raw) : fallback;
+  } catch (e) { return fallback; }
+}
+function saveJSON(key, value) {
+  try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) {}
+}
+
+// Genera IDs únicos con crypto.randomUUID() (con fallback por si el navegador no lo soporta)
+function uid(prefix) {
+  const raw = (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function")
+    ? crypto.randomUUID()
+    : `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
+  return prefix ? `${prefix}${raw}` : raw;
+}
+
+function CheckIcon() {
+  return <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>;
+}
+function XIcon() {
+  return <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>;
+}
+function PlusIcon() {
+  return <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>;
+}
+function ChevronIcon({ open, cls }) {
+  return (
+    <svg className={`${cls || "chevron"} ${open ? "open" : ""}`} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  );
+}
+function PauseIcon() {
+  return <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>;
+}
+function PlayIcon() {
+  return <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>;
+}
+function EditIcon() {
+  return <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg>;
+}
+function NoteIcon() {
+  return <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16v14l-4 4H4z"></path><path d="M8 10h8M8 14h5"></path></svg>;
+}
+function SunIcon() {
+  return <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="12" cy="12" r="4"></circle><line x1="12" y1="2" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22"></line><line x1="4.9" y1="4.9" x2="6.3" y2="6.3"></line><line x1="17.7" y1="17.7" x2="19.1" y2="19.1"></line><line x1="2" y1="12" x2="4" y2="12"></line><line x1="20" y1="12" x2="22" y2="12"></line><line x1="4.9" y1="19.1" x2="6.3" y2="17.7"></line><line x1="17.7" y1="6.3" x2="19.1" y2="4.9"></line></svg>;
+}
+function MoonIcon() {
+  return <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>;
+}
+
+function MiniCalendar({ habitId, monthKey, completions }) {
+  const { year, monthIdx } = parseMonthKey(monthKey);
+  const total = daysInMonth(year, monthIdx);
+  const cells = [];
+  for (let day = 1; day <= total; day++) {
+    const dateKey = `${year}-${pad(monthIdx + 1)}-${pad(day)}`;
+    const done = (completions[dateKey] || []).includes(habitId);
+    cells.push(<div className={`cal-cell ${done ? "done" : ""}`} key={day}>{day}</div>);
+  }
+  return <div className="cal-grid">{cells}</div>;
+}
+
+function yearGridWeeks(todayStr, weeksBack) {
+  const [ty, tm, td] = todayStr.split("-").map(Number);
+  const today = new Date(ty, tm - 1, td);
+  const dow = today.getDay();
+  const daysSinceMonday = dow === 0 ? 6 : dow - 1;
+  const thisMonday = new Date(today);
+  thisMonday.setDate(today.getDate() - daysSinceMonday);
+  const startMonday = new Date(thisMonday);
+  startMonday.setDate(thisMonday.getDate() - weeksBack * 7);
+  const weeks = [];
+  const cursor = new Date(startMonday);
+  for (let w = 0; w <= weeksBack; w++) {
+    const week = [];
+    for (let d = 0; d < 7; d++) {
+      const dateStr = `${cursor.getFullYear()}-${pad(cursor.getMonth() + 1)}-${pad(cursor.getDate())}`;
+      const isFuture = cursor > today;
+      week.push({ dateStr, isFuture });
+      cursor.setDate(cursor.getDate() + 1);
+    }
+    weeks.push(week);
+  }
+  return weeks;
+}
+
+function YearHeatmap({ habitId, completions, todayStr }) {
+  const weeks = useMemo(() => yearGridWeeks(todayStr, 52), [todayStr]);
+  return (
+    <div className="heat-scroll">
+      <div className="heat-grid">
+        {weeks.map((week, wi) => (
+          <div className="heat-col" key={wi}>
+            {week.map((day, di) => {
+              if (day.isFuture) return <div className="heat-cell" style={{ background: "transparent" }} key={di}></div>;
+              const done = (completions[day.dateStr] || []).includes(habitId);
+              return <div className={`heat-cell ${done ? "done" : ""}`} key={di} title={day.dateStr}></div>;
+            })}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// Aggregate heatmap: intensity = fraction of habits completed that day (4 levels)
+function ConsistencyHeatmap({ completions, habitCount, todayStr, weeksBack }) {
+  const weeks = useMemo(() => yearGridWeeks(todayStr, weeksBack), [todayStr, weeksBack]);
+  const levelFor = (dateStr, isFuture) => {
+    if (isFuture || habitCount === 0) return "";
+    const n = (completions[dateStr] || []).length;
+    const pct = n / habitCount;
+    if (pct <= 0) return "";
+    if (pct < 0.34) return "l1";
+    if (pct < 0.67) return "l2";
+    if (pct < 1) return "l3";
+    return "l4";
+  };
+  return (
+    <div className="heat-scroll">
+      <div className="heat-grid">
+        {weeks.map((week, wi) => (
+          <div className="heat-col" key={wi}>
+            {week.map((day, di) => {
+              if (day.isFuture) return <div className="heat-cell" style={{ background: "transparent" }} key={di}></div>;
+              const lvl = levelFor(day.dateStr, day.isFuture);
+              return <div className={`heat-cell ${lvl}`} key={di} title={day.dateStr}></div>;
+            })}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+const HOUR_HEIGHT = 56;
+function hourLabel(h) {
+  if (h === 0) return "12 AM";
+  if (h === 12) return "12 PM";
+  return h < 12 ? `${h} AM` : `${h - 12} PM`;
+}
+function layoutScheduleBlocks(items) {
+  const withMinutes = items.map((it) => {
+    const startMin = timeToMinutes(it.start) ?? 0;
+    let endMin = it.end ? timeToMinutes(it.end) : null;
+    if (endMin === null || endMin <= startMin) endMin = startMin + 30;
+    return { ...it, startMin, endMin };
+  }).sort((a, b) => a.startMin - b.startMin || a.endMin - b.endMin);
+
+  const clusters = [];
+  let current = [], currentEnd = -1;
+  withMinutes.forEach((e) => {
+    if (current.length === 0 || e.startMin < currentEnd) {
+      current.push(e);
+      currentEnd = Math.max(currentEnd, e.endMin);
+    } else {
+      clusters.push(current);
+      current = [e];
+      currentEnd = e.endMin;
+    }
+  });
+  if (current.length) clusters.push(current);
+
+  const positioned = [];
+  clusters.forEach((cluster) => {
+    const colEnds = [];
+    cluster.forEach((e) => {
+      let col = colEnds.findIndex((end) => e.startMin >= end);
+      if (col === -1) { col = colEnds.length; colEnds.push(e.endMin); }
+      else colEnds[col] = e.endMin;
+      positioned.push({ ...e, col });
+    });
+    const totalCols = colEnds.length;
+    for (let i = positioned.length - cluster.length; i < positioned.length; i++) positioned[i].totalCols = totalCols;
+  });
+  return positioned;
+}
+
+function App() {
+  const today = todayKey();
+  const todayDow = new Date(today + "T00:00:00").getDay();
+  const [tab, setTab] = useState("hoy");
+  const [theme, setTheme] = useState(() => loadJSON("theme", "light"));
+  const [habits, setHabits] = useState(() => loadJSON("habits", DEFAULT_HABITS));
+  const [completions, setCompletions] = useState(() => loadJSON("completions", {}));
+  const [sleepLog, setSleepLog] = useState(() => loadJSON("sleep", {}));
+  const [calendarEvents, setCalendarEvents] = useState(() => loadJSON("calendarEvents", {}));
+  const [calMonth, setCalMonth] = useState(() => ({ year: new Date().getFullYear(), monthIdx: new Date().getMonth() }));
+  const [calSelected, setCalSelected] = useState(today);
+  const [calNewText, setCalNewText] = useState("");
+  const [daySchedules, setDaySchedules] = useState(() => loadJSON("daySchedules", {}));
+  const [schStart, setSchStart] = useState("");
+  const [schEnd, setSchEnd] = useState("");
+  const [schText, setSchText] = useState("");
+  const [dupDate, setDupDate] = useState("");
+  const [dupMsg, setDupMsg] = useState("");
+  const [newHabit, setNewHabit] = useState("");
+  const [flexOpen, setFlexOpen] = useState(false);
+  const [flexName, setFlexName] = useState("");
+  const [flexDays, setFlexDays] = useState([]);
+  const [editingDaysId, setEditingDaysId] = useState(null);
+  const [editDaysValue, setEditDaysValue] = useState([]);
+  const pressTimerRef = useRef(null);
+  const existing = sleepLog[today] || {};
+  const [sleepTotal, setSleepTotal] = useState(existing.total ?? "");
+  const [sleepDeep, setSleepDeep] = useState(existing.deep ?? "");
+  const [sleepLight, setSleepLight] = useState(existing.light ?? "");
+  const [sleepRem, setSleepRem] = useState(existing.rem ?? "");
+  const [sleepWake, setSleepWake] = useState(existing.wake ?? "");
+  const [sleepBedtime, setSleepBedtime] = useState(existing.bedtime ?? "");
+  const [saveMsg, setSaveMsg] = useState("");
+  const [sleepWarning, setSleepWarning] = useState("");
+  const [expanded, setExpanded] = useState({});
+  const [heatmapOpen, setHeatmapOpen] = useState({});
+  const currentMonthKey = monthKeyOf(new Date().getFullYear(), new Date().getMonth());
+  const [habitMonths, setHabitMonths] = useState({});
+  const [statsMonth, setStatsMonth] = useState(currentMonthKey);
+  const [lookupDate, setLookupDate] = useState(today);
+  const [sleepThresholds, setSleepThresholds] = useState(() => loadJSON("sleepThresholds", { high: 7, low: 6 }));
+  const fileInputRef = useRef(null);
+  const [importMsg, setImportMsg] = useState("");
+
+  // notas por hábito
+  const [habitNotes, setHabitNotes] = useState(() => loadJSON("habitNotes", {}));
+  const [noteOpenId, setNoteOpenId] = useState(null);
+  const [noteDraft, setNoteDraft] = useState("");
+
+  // editar nota de calendario
+  const [editingEventId, setEditingEventId] = useState(null);
+  const [editingEventText, setEditingEventText] = useState("");
+
+  // editar / recurrencia de bloques de horario
+  const [editingScheduleId, setEditingScheduleId] = useState(null);
+  const [recurringSchedules, setRecurringSchedules] = useState(() => loadJSON("recurringSchedules", []));
+  const [schRecurring, setSchRecurring] = useState(false);
+  const [schRecurDays, setSchRecurDays] = useState([]);
+
+  useEffect(() => { saveJSON("habits", habits); }, [habits]);
+  useEffect(() => { saveJSON("completions", completions); }, [completions]);
+  useEffect(() => { saveJSON("sleep", sleepLog); }, [sleepLog]);
+  useEffect(() => { saveJSON("calendarEvents", calendarEvents); }, [calendarEvents]);
+  useEffect(() => { saveJSON("daySchedules", daySchedules); }, [daySchedules]);
+  useEffect(() => { saveJSON("sleepThresholds", sleepThresholds); }, [sleepThresholds]);
+  useEffect(() => { saveJSON("habitNotes", habitNotes); }, [habitNotes]);
+  useEffect(() => { saveJSON("recurringSchedules", recurringSchedules); }, [recurringSchedules]);
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    saveJSON("theme", theme);
+  }, [theme]);
+
+  const addHabit = () => {
+    const name = newHabit.trim();
+    if (!name) return;
+    setHabits([...habits, { id: uid("h"), name }]);
+    setNewHabit("");
+  };
+  const removeHabit = (id) => setHabits(habits.filter((h) => h.id !== id));
+  const toggleHabit = (id) => {
+    const habit = habits.find((h) => h.id === id);
+    if (habit && habit.paused) return;
+    if (habit && habit.days && !habit.days.includes(todayDow)) return;
+    const set = new Set(completions[today] || []);
+    set.has(id) ? set.delete(id) : set.add(id);
+    setCompletions({ ...completions, [today]: Array.from(set) });
+  };
+  const togglePause = (id) => setHabits(habits.map((h) => (h.id === id ? { ...h, paused: !h.paused } : h)));
+  const openNote = (habit) => {
+    if (noteOpenId === habit.id) { setNoteOpenId(null); return; }
+    setNoteDraft(habitNotes[`${today}::${habit.id}`] || "");
+    setNoteOpenId(habit.id);
+  };
+  const saveNote = (habitId) => {
+    const copy = { ...habitNotes };
+    const key = `${today}::${habitId}`;
+    if (noteDraft.trim()) copy[key] = noteDraft; else delete copy[key];
+    setHabitNotes(copy);
+    setNoteOpenId(null);
+  };
+  const confirmAddFlexHabit = () => {
+    const name = flexName.trim();
+    if (!name || flexDays.length === 0) return;
+    setHabits([...habits, { id: uid("h"), name, days: [...flexDays].sort((a, b) => a - b) }]);
+    setFlexName(""); setFlexDays([]); setFlexOpen(false);
+  };
+  const saveEditDays = (id) => {
+    if (editDaysValue.length === 0) return;
+    setHabits(habits.map((h) => (h.id === id ? { ...h, days: [...editDaysValue].sort((a, b) => a - b) } : h)));
+    setEditingDaysId(null);
+  };
+  const handlePressStart = (habit) => {
+    if (!habit.days) return;
+    pressTimerRef.current = setTimeout(() => {
+      setEditingDaysId(habit.id);
+      setEditDaysValue(habit.days);
+    }, 550);
+  };
+  const handlePressEnd = () => {
+    if (pressTimerRef.current) { clearTimeout(pressTimerRef.current); pressTimerRef.current = null; }
+  };
+  const todayCompletions = completions[today] || [];
+  const toggleExpand = (id) => setExpanded({ ...expanded, [id]: !expanded[id] });
+  const toggleHeatmap = (id) => setHeatmapOpen({ ...heatmapOpen, [id]: !heatmapOpen[id] });
+
+  const saveSleep = () => {
+    const total = parseFloat(sleepTotal);
+    if (isNaN(total) || total < 0) return;
+    const deep = sleepDeep === "" ? undefined : parseFloat(sleepDeep);
+    const light = sleepLight === "" ? undefined : parseFloat(sleepLight);
+    const rem = sleepRem === "" ? undefined : parseFloat(sleepRem);
+    const entry = { total };
+    if (deep !== undefined && !isNaN(deep)) entry.deep = deep;
+    if (light !== undefined && !isNaN(light)) entry.light = light;
+    if (rem !== undefined && !isNaN(rem)) entry.rem = rem;
+    if (sleepWake) entry.wake = sleepWake;
+    if (sleepBedtime) entry.bedtime = sleepBedtime;
+    setSleepLog({ ...sleepLog, [today]: entry });
+    const phaseSum = (entry.deep || 0) + (entry.rem || 0) + (entry.light || 0);
+    if (phaseSum > total + 0.01) {
+      setSleepWarning(`Las fases (${phaseSum.toFixed(2)} h) suman más que el total (${total} h). Revisa los valores.`);
+    } else {
+      setSleepWarning("");
+    }
+    setSaveMsg("Registro guardado");
+    setTimeout(() => setSaveMsg(""), 2000);
+  };
+
+  const chartData = useMemo(() => {
+    const days = last7Days(today);
+    return days.map((dateStr) => {
+      const entry = sleepLog[dateStr];
+      const total = entry?.total ?? 0;
+      const deep = entry?.deep || 0;
+      const rem = entry?.rem || 0;
+      const light = entry?.light || 0;
+      const other = Math.max(total - deep - rem - light, 0);
+      return { day: dayLabel(dateStr, today), total, deep, rem, light, other };
+    });
+  }, [sleepLog, today]);
+  const maxVal = Math.max(4, ...chartData.map((d) => d.deep + d.rem + d.light + d.other));
+  const activeHabits = useMemo(() => habits.filter((h) => !h.paused), [habits]);
+
+  const monthStats = useMemo(() => {
+    const { year, monthIdx } = parseMonthKey(statsMonth);
+    const totalDays = daysInMonth(year, monthIdx);
+    let totals = [], deeps = [], rems = [], lights = [], wakes = [], bedtimes = [];
+    for (let day = 1; day <= totalDays; day++) {
+      const dateKey = `${year}-${pad(monthIdx + 1)}-${pad(day)}`;
+      const e = sleepLog[dateKey];
+      if (!e) continue;
+      if (typeof e.total === "number") totals.push(e.total);
+      if (typeof e.deep === "number") deeps.push(e.deep);
+      if (typeof e.rem === "number") rems.push(e.rem);
+      if (typeof e.light === "number") lights.push(e.light);
+      const wm = timeToMinutes(e.wake);
+      if (wm !== null) wakes.push(wm);
+      const bm = timeToMinutes(e.bedtime);
+      if (bm !== null) bedtimes.push(bm);
+    }
+    const avg = (arr) => (arr.length ? (arr.reduce((a, b) => a + b, 0) / arr.length) : null);
+    return { total: avg(totals), deep: avg(deeps), rem: avg(rems), light: avg(lights), wake: avg(wakes), bedtime: avg(bedtimes) };
+  }, [sleepLog, statsMonth]);
+
+  const fmtAvg = (v) => (v === null ? "—" : `${v.toFixed(1)} h`);
+  const lookupEntry = sleepLog[lookupDate];
+
+  const weekSummary = useMemo(() => {
+    const days = currentWeekDates(today);
+    let done = 0;
+    let sleepVals = [];
+    days.forEach((d) => {
+      done += (completions[d] || []).length;
+      const e = sleepLog[d];
+      if (e && typeof e.total === "number") sleepVals.push(e.total);
+    });
+    const slots = days.length * activeHabits.length;
+    const pct = slots > 0 ? Math.round((done / slots) * 100) : 0;
+    const avgSleep = sleepVals.length ? (sleepVals.reduce((a, b) => a + b, 0) / sleepVals.length) : null;
+    return { done, slots, pct, avgSleep, days: days.length };
+  }, [completions, sleepLog, activeHabits, today]);
+
+  // week strip (Mon..Sun of current week) for the hero header
+  const weekStrip = useMemo(() => {
+    const days = fullWeekDatesContaining(today);
+    return days.map((d) => {
+      const isToday = d === today;
+      const isFuture = d > today;
+      const n = (completions[d] || []).length;
+      const done = !isFuture && activeHabits.length > 0 && n === activeHabits.length && n > 0;
+      const some = !isFuture && n > 0 && !done;
+      return { d, isToday, isFuture, done, some };
+    });
+  }, [completions, activeHabits, today]);
+
+  const sleepHabitCorrelation = useMemo(() => {
+    const highPcts = [], lowPcts = [];
+    Object.keys(sleepLog).forEach((dateKey) => {
+      const e = sleepLog[dateKey];
+      if (!e || typeof e.total !== "number" || activeHabits.length === 0) return;
+      const pct = ((completions[dateKey] || []).length / activeHabits.length) * 100;
+      if (e.total >= sleepThresholds.high) highPcts.push(pct);
+      else if (e.total < sleepThresholds.low) lowPcts.push(pct);
+    });
+    const avg = (arr) => (arr.length ? arr.reduce((a, b) => a + b, 0) / arr.length : null);
+    return { high: avg(highPcts), highN: highPcts.length, low: avg(lowPcts), lowN: lowPcts.length };
+  }, [sleepLog, completions, activeHabits, sleepThresholds]);
+
+  const wakeConsistency = useMemo(() => {
+    const { year, monthIdx } = parseMonthKey(statsMonth);
+    const totalDays = daysInMonth(year, monthIdx);
+    const wakes = [];
+    for (let day = 1; day <= totalDays; day++) {
+      const dateKey = `${year}-${pad(monthIdx + 1)}-${pad(day)}`;
+      const e = sleepLog[dateKey];
+      const wm = e ? timeToMinutes(e.wake) : null;
+      if (wm !== null) wakes.push(wm);
+    }
+    if (wakes.length < 2) return null;
+    const mean = wakes.reduce((a, b) => a + b, 0) / wakes.length;
+    const avgDev = wakes.reduce((a, b) => a + Math.abs(b - mean), 0) / wakes.length;
+    return Math.round(avgDev);
+  }, [sleepLog, statsMonth]);
+
+  const bedtimeConsistency = useMemo(() => {
+    const { year, monthIdx } = parseMonthKey(statsMonth);
+    const totalDays = daysInMonth(year, monthIdx);
+    const bedtimes = [];
+    for (let day = 1; day <= totalDays; day++) {
+      const dateKey = `${year}-${pad(monthIdx + 1)}-${pad(day)}`;
+      const e = sleepLog[dateKey];
+      const bm = e ? timeToMinutes(e.bedtime) : null;
+      if (bm !== null) bedtimes.push(bm);
+    }
+    if (bedtimes.length < 2) return null;
+    const mean = bedtimes.reduce((a, b) => a + b, 0) / bedtimes.length;
+    const avgDev = bedtimes.reduce((a, b) => a + Math.abs(b - mean), 0) / bedtimes.length;
+    return Math.round(avgDev);
+  }, [sleepLog, statsMonth]);
+
+  const exportData = () => {
+    const payload = { habits, completions, sleep: sleepLog, exportedAt: new Date().toISOString() };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `habitos-backup-${today}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+  const triggerImport = () => fileInputRef.current && fileInputRef.current.click();
+  const handleImportFile = (e) => {
+    const file = e.target.files && e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const data = JSON.parse(reader.result);
+        if (data.habits) setHabits(data.habits);
+        if (data.completions) setCompletions(data.completions);
+        if (data.sleep) setSleepLog(data.sleep);
+        setImportMsg("Copia restaurada correctamente");
+      } catch (err) {
+        setImportMsg("El archivo no es válido");
+      }
+      setTimeout(() => setImportMsg(""), 3000);
+    };
+    reader.readAsText(file);
+    e.target.value = "";
+  };
+
+  const calWeeks = useMemo(() => calendarMonthGrid(calMonth.year, calMonth.monthIdx), [calMonth]);
+  const addCalEvent = () => {
+    const text = calNewText.trim();
+    if (!text) return;
+    const list = calendarEvents[calSelected] || [];
+    setCalendarEvents({ ...calendarEvents, [calSelected]: [...list, { id: uid("e"), text }] });
+    setCalNewText("");
+  };
+  const removeCalEvent = (dateStr, id) => {
+    const list = (calendarEvents[dateStr] || []).filter((e) => e.id !== id);
+    const copy = { ...calendarEvents };
+    if (list.length) copy[dateStr] = list; else delete copy[dateStr];
+    setCalendarEvents(copy);
+  };
+  const startEditEvent = (ev) => { setEditingEventId(ev.id); setEditingEventText(ev.text); };
+  const saveEditEvent = (dateStr, id) => {
+    const text = editingEventText.trim();
+    if (!text) { setEditingEventId(null); return; }
+    const list = (calendarEvents[dateStr] || []).map((e) => (e.id === id ? { ...e, text } : e));
+    setCalendarEvents({ ...calendarEvents, [dateStr]: list });
+    setEditingEventId(null);
+  };
+  const goToMonth = (delta) => {
+    const d = new Date(calMonth.year, calMonth.monthIdx + delta, 1);
+    setCalMonth({ year: d.getFullYear(), monthIdx: d.getMonth() });
+  };
+
+  const calSelectedDow = useMemo(() => new Date(calSelected + "T00:00:00").getDay(), [calSelected]);
+  const scheduleList = useMemo(() => {
+    const list = (daySchedules[calSelected] || []).map((s) => ({ ...s, recurring: false }));
+    const recur = recurringSchedules
+      .filter((r) => r.days.includes(calSelectedDow))
+      .map((r) => ({ id: `rec-${r.id}`, ruleId: r.id, start: r.start, end: r.end, text: r.text, recurring: true }));
+    return [...list, ...recur].sort((a, b) => (a.start || "99:99").localeCompare(b.start || "99:99"));
+  }, [daySchedules, calSelected, recurringSchedules, calSelectedDow]);
+  const positionedSchedule = useMemo(() => layoutScheduleBlocks(scheduleList), [scheduleList]);
+  const timelineRef = useRef(null);
+  useEffect(() => {
+    if (tab === "calendario" && timelineRef.current) {
+      timelineRef.current.scrollTop = 6 * HOUR_HEIGHT;
+    }
+  }, [tab, calSelected]);
+  const [nowMinutes, setNowMinutes] = useState(() => {
+    const n = new Date();
+    return n.getHours() * 60 + n.getMinutes();
+  });
+  useEffect(() => {
+    if (tab !== "calendario") return;
+    const tick = () => {
+      const n = new Date();
+      setNowMinutes(n.getHours() * 60 + n.getMinutes());
+    };
+    tick();
+    const interval = setInterval(tick, 60000);
+    return () => clearInterval(interval);
+  }, [tab, calSelected]);
+  const resetScheduleForm = () => {
+    setSchStart(""); setSchEnd(""); setSchText(""); setSchRecurring(false); setSchRecurDays([]); setEditingScheduleId(null);
+  };
+  const addSchedule = () => {
+    const text = schText.trim();
+    if (!text) return;
+    if (editingScheduleId) {
+      if (editingScheduleId.startsWith("rec-")) {
+        const ruleId = editingScheduleId.slice(4);
+        setRecurringSchedules(recurringSchedules.map((r) => (r.id === ruleId ? { ...r, start: schStart, end: schEnd, text, days: schRecurDays.length ? schRecurDays : r.days } : r)));
+      } else {
+        const list = (daySchedules[calSelected] || []).map((s) => (s.id === editingScheduleId ? { ...s, start: schStart, end: schEnd, text } : s));
+        setDaySchedules({ ...daySchedules, [calSelected]: list });
+      }
+      resetScheduleForm();
+      return;
+    }
+    if (schRecurring) {
+      if (schRecurDays.length === 0) return;
+      setRecurringSchedules([...recurringSchedules, { id: uid("r"), days: [...schRecurDays].sort((a, b) => a - b), start: schStart, end: schEnd, text }]);
+    } else {
+      const list = daySchedules[calSelected] || [];
+      setDaySchedules({ ...daySchedules, [calSelected]: [...list, { id: uid("s"), start: schStart, end: schEnd, text }] });
+    }
+    resetScheduleForm();
+  };
+  const startEditSchedule = (block) => {
+    setEditingScheduleId(block.id);
+    setSchStart(block.start || ""); setSchEnd(block.end || ""); setSchText(block.text || "");
+    if (block.recurring) {
+      const rule = recurringSchedules.find((r) => r.id === block.ruleId);
+      setSchRecurring(true);
+      setSchRecurDays(rule ? rule.days : []);
+    } else {
+      setSchRecurring(false); setSchRecurDays([]);
+    }
+  };
+  const removeSchedule = (dateStr, block) => {
+    if (block.recurring) {
+      if (!window.confirm("Este bloque se repite cada semana. ¿Eliminar la serie completa?")) return;
+      setRecurringSchedules(recurringSchedules.filter((r) => r.id !== block.ruleId));
+      if (editingScheduleId === block.id) resetScheduleForm();
+      return;
+    }
+    const list = (daySchedules[dateStr] || []).filter((s) => s.id !== block.id);
+    const copy = { ...daySchedules };
+    if (list.length) copy[dateStr] = list; else delete copy[dateStr];
+    setDaySchedules(copy);
+    if (editingScheduleId === block.id) resetScheduleForm();
+  };
+  const duplicateSchedule = () => {
+    if (!dupDate || scheduleList.length === 0 || dupDate === calSelected) return;
+    const existing = daySchedules[dupDate] || [];
+    if (existing.length > 0 && !window.confirm("Ese día ya tiene un horario. ¿Reemplazarlo?")) return;
+    const copy = scheduleList.map((it) => ({ id: uid("s"), start: it.start, end: it.end, text: it.text }));
+    setDaySchedules({ ...daySchedules, [dupDate]: copy });
+    setDupDate("");
+    setDupMsg("Horario duplicado ✓");
+    setTimeout(() => setDupMsg(""), 2200);
+  };
+
+  const heroDateStr = new Date().toLocaleDateString("es-ES", { weekday: "long", day: "numeric", month: "long" });
+  const hour = new Date().getHours();
+  const greeting = hour < 12 ? "buenos días" : hour < 20 ? "buenas tardes" : "buenas noches";
+
+  return (
+    <div id="root">
+      <div className="hero">
+        <div>
+          <p className="hero-eyebrow">{greeting}</p>
+          <h1 className="hero-date">{heroDateStr}</h1>
+        </div>
+        <div className="hero-right">
+          <button className="theme-switch" onClick={() => setTheme(theme === "light" ? "dark" : "light")} aria-label="Cambiar tema">
+            <span className="knob">{theme === "light" ? <SunIcon /> : <MoonIcon />}</span>
+          </button>
+          <div className="week-strip" title="Esta semana">
+            {weekStrip.map((w) => (
+              <div key={w.d} className={`week-dot ${w.done ? "done" : ""} ${w.isToday ? "today" : ""}`}
+                   style={w.some && !w.done ? { background: "var(--faint)" } : undefined}></div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="tabs-wrap">
+        <div className="tabs">
+          <button className={`tab-btn ${tab === "hoy" ? "active" : ""}`} onClick={() => setTab("hoy")}>
+            Hoy
+            {tab === "hoy" && <span className="tab-underline"></span>}
+          </button>
+          <button className={`tab-btn ${tab === "historial" ? "active" : ""}`} onClick={() => setTab("historial")}>
+            Historial
+            {tab === "historial" && <span className="tab-underline"></span>}
+          </button>
+          <button className={`tab-btn ${tab === "calendario" ? "active" : ""}`} onClick={() => setTab("calendario")}>
+            Calendario
+            {tab === "calendario" && <span className="tab-underline"></span>}
+          </button>
+        </div>
+      </div>
+
+      {tab === "hoy" && (
+        <React.Fragment>
+          <div className="section-pad">
+            <p className="section-label">Hoy</p>
+            <p className="count-line">{todayCompletions.length}/{activeHabits.length} completados{weekSummary.avgSleep !== null ? ` · sueño promedio ${weekSummary.avgSleep.toFixed(1)} h esta semana` : ""}</p>
+          </div>
+
+          <div className="habit-list">
+            {habits.length === 0 && <div className="empty">Aún no tienes hábitos. Añade el primero abajo.</div>}
+            {habits.map((habit) => {
+              const checked = todayCompletions.includes(habit.id);
+              const isOpen = !!expanded[habit.id];
+              const streak = computeStreak(habit, completions, today);
+              const best = computeBestStreak(habit, completions);
+              const activeToday = (!habit.days || habit.days.includes(todayDow)) && !habit.paused;
+              const hasNote = !!(habitNotes[`${today}::${habit.id}`] || "").trim();
+              let badgeText = null;
+              if (streak > 0 && best > streak) badgeText = `${streak} d · récord ${best}`;
+              else if (streak > 0) badgeText = `${streak} ${streak === 1 ? "día" : "días"}`;
+              else if (best > 0) badgeText = `récord ${best} d`;
+              const handleToggle = () => { if (activeToday) toggleHabit(habit.id); };
+              return (
+                <React.Fragment key={habit.id}>
+                  <div
+                    className={`habit-row-open ${!activeToday ? "inactive-today" : ""} ${habit.paused ? "paused" : ""}`}
+                    onMouseDown={() => handlePressStart(habit)}
+                    onMouseUp={handlePressEnd}
+                    onMouseLeave={handlePressEnd}
+                    onTouchStart={() => handlePressStart(habit)}
+                    onTouchEnd={handlePressEnd}
+                  >
+                    <div className={`circle-check ${checked ? "checked" : ""} ${!activeToday ? "disabled" : ""}`} onClick={handleToggle}>
+                      {checked && <CheckIcon />}
+                    </div>
+                    <span className={`habit-name-open ${checked ? "done" : ""}`} onClick={handleToggle}>{habit.name}</span>
+                    {habit.paused && <span className="pause-badge">Pausado</span>}
+                    {habit.days && <span className="flex-days-badge">{daysLabel(habit.days)}</span>}
+                    {badgeText && <span className="streak-mini">{badgeText}</span>}
+                    <div className="row-actions">
+                      <button className="icon-btn" onClick={() => openNote(habit)} aria-label="Nota del día" style={hasNote ? { color: "var(--ink)" } : undefined}>
+                        <NoteIcon />
+                      </button>
+                      <button className="icon-btn" onClick={() => togglePause(habit.id)} aria-label={habit.paused ? "Reanudar hábito" : "Pausar hábito"}>
+                        {habit.paused ? <PlayIcon /> : <PauseIcon />}
+                      </button>
+                      <button className="icon-btn" onClick={() => toggleExpand(habit.id)} aria-label="Ver calendario del mes">
+                        <ChevronIcon open={isOpen} />
+                      </button>
+                      <button className="icon-btn" onClick={() => removeHabit(habit.id)} aria-label={`Eliminar ${habit.name}`}>
+                        <XIcon />
+                      </button>
+                    </div>
+                  </div>
+                  {noteOpenId === habit.id && (
+                    <div className="habit-note-panel">
+                      <textarea
+                        value={noteDraft}
+                        onChange={(e) => setNoteDraft(e.target.value)}
+                        placeholder="Nota de hoy para este hábito (opcional)"
+                        autoFocus
+                      />
+                      <div style={{ display: "flex", gap: 8, marginTop: 8 }}>
+                        <button className="save-btn" onClick={() => saveNote(habit.id)}>Guardar nota</button>
+                        <button className="btn-quiet" style={{ width: "auto", margin: 0, padding: "10px 16px" }} onClick={() => setNoteOpenId(null)}>Cancelar</button>
+                      </div>
+                    </div>
+                  )}
+                  {isOpen && (
+                    <div className="cal-panel-open">
+                      <MiniCalendar habitId={habit.id} monthKey={currentMonthKey} completions={completions} />
+                    </div>
+                  )}
+                  {editingDaysId === habit.id && (
+                    <div className="flex-habit-panel">
+                      <div className="day-picker">
+                        {DAY_NAMES_MON.map((label, i) => {
+                          const dayNum = i === 6 ? 0 : i + 1;
+                          const active = editDaysValue.includes(dayNum);
+                          return (
+                            <button
+                              key={dayNum}
+                              type="button"
+                              className={`day-chip ${active ? "active" : ""}`}
+                              onClick={() => setEditDaysValue((prev) => (prev.includes(dayNum) ? prev.filter((x) => x !== dayNum) : [...prev, dayNum]))}
+                            >
+                              {label}
+                            </button>
+                          );
+                        })}
+                      </div>
+                      <div style={{ display: "flex", gap: 8 }}>
+                        <button className="save-btn" onClick={() => saveEditDays(habit.id)} disabled={editDaysValue.length === 0}>Guardar días</button>
+                        <button className="btn-quiet" style={{ width: "auto", margin: 0, padding: "10px 16px" }} onClick={() => setEditingDaysId(null)}>Cancelar</button>
+                      </div>
+                    </div>
+                  )}
+                </React.Fragment>
+              );
+            })}
+          </div>
+          <div className="add-row-open">
+            <button className="plus-circ" onClick={addHabit} aria-label="Añadir hábito"><PlusIcon /></button>
+            <input
+              value={newHabit}
+              onChange={(e) => setNewHabit(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && addHabit()}
+              placeholder="Añadir un hábito nuevo"
+            />
+          </div>
+
+          <div className="add-row-open" onClick={() => setFlexOpen((v) => !v)} style={{ cursor: "pointer" }}>
+            <button
+              className="plus-circ"
+              aria-label="Añadir hábito flexible"
+              onClick={(e) => { e.stopPropagation(); setFlexOpen((v) => !v); }}
+            >
+              <PlusIcon />
+            </button>
+            <span className="flex-label">Añadir un hábito flexible nuevo</span>
+            <ChevronIcon open={flexOpen} />
+          </div>
+          {flexOpen && (
+            <div className="flex-habit-panel">
+              <input
+                value={flexName}
+                onChange={(e) => setFlexName(e.target.value)}
+                placeholder="Nombre del hábito"
+              />
+              <div className="day-picker">
+                {DAY_NAMES_MON.map((label, i) => {
+                  const dayNum = i === 6 ? 0 : i + 1;
+                  const active = flexDays.includes(dayNum);
+                  return (
+                    <button
+                      key={dayNum}
+                      type="button"
+                      className={`day-chip ${active ? "active" : ""}`}
+                      onClick={() => setFlexDays((prev) => (prev.includes(dayNum) ? prev.filter((x) => x !== dayNum) : [...prev, dayNum]))}
+                    >
+                      {label}
+                    </button>
+                  );
+                })}
+              </div>
+              <button className="save-btn" onClick={confirmAddFlexHabit} disabled={!flexName.trim() || flexDays.length === 0}>Añadir hábito flexible</button>
+            </div>
+          )}
+
+          {habits.length > 0 && (
+            <div className="heat-teaser">
+              <p className="section-label" style={{ marginBottom: 12 }}>Constancia — 12 semanas</p>
+              <ConsistencyHeatmap completions={completions} habitCount={activeHabits.length} todayStr={today} weeksBack={11} />
+              <div className="heat-legend">
+                <span>menos</span>
+                <span className="heat-cell l1"></span><span className="heat-cell l2"></span><span className="heat-cell l3"></span><span className="heat-cell l4"></span>
+                <span>más</span>
+              </div>
+            </div>
+          )}
+
+          <div className="section-pad">
+            <p className="section-label">🌙 Sueño</p>
+          </div>
+          <div className="card-quiet-pad">
+            <div className="field-row-mini">
+              <div className="field-mini"><label>Total (h)</label><input type="number" step="0.25" min="0" max="24" value={sleepTotal} onChange={(e) => setSleepTotal(e.target.value)} placeholder="7.5" /></div>
+              <div className="field-mini"><label>Profundo (h)</label><input type="number" step="0.25" min="0" max="24" value={sleepDeep} onChange={(e) => setSleepDeep(e.target.value)} placeholder="opcional" /></div>
+              <div className="field-mini"><label>REM (h)</label><input type="number" step="0.25" min="0" max="24" value={sleepRem} onChange={(e) => setSleepRem(e.target.value)} placeholder="opcional" /></div>
+              <div className="field-mini"><label>Ligero (h)</label><input type="number" step="0.25" min="0" max="24" value={sleepLight} onChange={(e) => setSleepLight(e.target.value)} placeholder="opcional" /></div>
+            </div>
+            <div className="field-row-2">
+              <div className="field-mini"><label>Te acuestas</label><input type="time" value={sleepBedtime} onChange={(e) => setSleepBedtime(e.target.value)} /></div>
+              <div className="field-mini"><label>Te despiertas</label><input type="time" value={sleepWake} onChange={(e) => setSleepWake(e.target.value)} /></div>
+            </div>
+            <div className="save-row">
+              <button className="save-btn" onClick={saveSleep}>Guardar registro de hoy</button>
+              {saveMsg && <span className="save-msg">{saveMsg}</span>}
+            </div>
+            {sleepWarning && <p className="save-warn">{sleepWarning}</p>}
+          </div>
+
+          <div className="section-pad"></div>
+          <div className="card-quiet-pad" style={{ marginTop: -16 }}>
+            <p className="chart-title">Últimos 7 días</p>
+            <div className="chart-wrap">
+              <div className="chart">
+                {chartData.map((d, i) => {
+                  const totalH = d.deep + d.rem + d.light + d.other;
+                  const heightPct = totalH === 0 ? 0 : (totalH / maxVal) * 100;
+                  const deepPct = totalH === 0 ? 0 : (d.deep / totalH) * 100;
+                  const remPct = totalH === 0 ? 0 : (d.rem / totalH) * 100;
+                  const lightPct = totalH === 0 ? 0 : (d.light / totalH) * 100;
+                  const otherPct = totalH === 0 ? 0 : (d.other / totalH) * 100;
+                  return (
+                    <div className="bar-col" key={i}>
+                      <span className="bar-total">{totalH > 0 ? totalH.toFixed(1) : ""}</span>
+                      <div className="bar-stack" style={{ height: `${heightPct}%` }}>
+                        <div className="bar-deep" style={{ height: `${deepPct}%` }}></div>
+                        <div className="bar-rem" style={{ height: `${remPct}%` }}></div>
+                        <div className="bar-light" style={{ height: `${lightPct}%` }}></div>
+                        <div className="bar-other" style={{ height: `${otherPct}%` }}></div>
+                      </div>
+                      <span className="bar-label">{d.day}</span>
+                    </div>
+                  );
+                })}
+              </div>
+              <div className="legend">
+                <div className="legend-item"><span className="swatch sw-deep"></span>Profundo</div>
+                <div className="legend-item"><span className="swatch sw-rem"></span>REM</div>
+                <div className="legend-item"><span className="swatch sw-light"></span>Ligero</div>
+              </div>
+            </div>
+          </div>
+        </React.Fragment>
+      )}
+
+      {tab === "historial" && (
+        <React.Fragment>
+          <div className="section-pad">
+            <p className="section-label">Hábitos por mes</p>
+          </div>
+          {habits.length === 0 && <div className="empty">Aún no tienes hábitos.</div>}
+          {habits.map((habit) => {
+            const mKey = habitMonths[habit.id] || currentMonthKey;
+            const isHeatOpen = !!heatmapOpen[habit.id];
+            return (
+              <div className="habit-block" key={habit.id}>
+                <div className="habit-block-head">
+                  <span className="habit-block-name">{habit.name}</span>
+                  <select
+                    className="select-mini"
+                    value={mKey}
+                    onChange={(e) => setHabitMonths({ ...habitMonths, [habit.id]: e.target.value })}
+                  >
+                    {monthOptions().map((mk) => (
+                      <option value={mk} key={mk}>{monthLabel(mk)}</option>
+                    ))}
+                  </select>
+                </div>
+                <MiniCalendar habitId={habit.id} monthKey={mKey} completions={completions} />
+                <div className="heat-toggle-row" onClick={() => toggleHeatmap(habit.id)}>
+                  <p>Últimos 12 meses</p>
+                  <ChevronIcon open={isHeatOpen} cls="chev" />
+                </div>
+                {isHeatOpen && (
+                  <YearHeatmap habitId={habit.id} completions={completions} todayStr={today} />
+                )}
+              </div>
+            );
+          })}
+
+          <div className="section-pad-row">
+            <p className="section-label">🌙 Sueño — promedios</p>
+            <select className="select-mini" value={statsMonth} onChange={(e) => setStatsMonth(e.target.value)}>
+              {monthOptions().map((mk) => (
+                <option value={mk} key={mk}>{monthLabel(mk)}</option>
+              ))}
+            </select>
+          </div>
+          <div className="card-quiet">
+            <div className="stat-row"><span className="stat-label">Sueño total promedio</span><span className="stat-value">{fmtAvg(monthStats.total)}</span></div>
+            <div className="stat-row"><span className="stat-label">Sueño profundo promedio</span><span className="stat-value">{fmtAvg(monthStats.deep)}</span></div>
+            <div className="stat-row"><span className="stat-label">Sueño REM promedio</span><span className="stat-value">{fmtAvg(monthStats.rem)}</span></div>
+            <div className="stat-row"><span className="stat-label">Sueño ligero promedio</span><span className="stat-value">{fmtAvg(monthStats.light)}</span></div>
+            <div className="stat-row"><span className="stat-label">Hora media de acostarte</span><span className="stat-value">{monthStats.bedtime === null ? "—" : minutesToTime(monthStats.bedtime)}</span></div>
+            <div className="stat-row"><span className="stat-label">Consistencia de la hora de dormir</span><span className="stat-value muted-val">{bedtimeConsistency === null ? "—" : `± ${bedtimeConsistency} min`}</span></div>
+            <div className="stat-row"><span className="stat-label">Hora media de despertar</span><span className="stat-value">{monthStats.wake === null ? "—" : minutesToTime(monthStats.wake)}</span></div>
+            <div className="stat-row"><span className="stat-label">Consistencia del horario</span><span className="stat-value muted-val">{wakeConsistency === null ? "—" : `± ${wakeConsistency} min`}</span></div>
+          </div>
+
+          <div className="section-pad"></div>
+          <div className="card-quiet-pad" style={{ marginTop: -16 }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 12 }}>
+              <span className="section-label">Consultar un día</span>
+              <input className="date-input-mini" type="date" value={lookupDate} onChange={(e) => setLookupDate(e.target.value)} />
+            </div>
+            {lookupEntry ? (
+              <React.Fragment>
+                <div className="stat-row"><span className="stat-label">Total</span><span className="stat-value">{typeof lookupEntry.total === "number" ? `${lookupEntry.total} h` : "—"}</span></div>
+                <div className="stat-row"><span className="stat-label">Profundo</span><span className="stat-value">{typeof lookupEntry.deep === "number" ? `${lookupEntry.deep} h` : "—"}</span></div>
+                <div className="stat-row"><span className="stat-label">REM</span><span className="stat-value">{typeof lookupEntry.rem === "number" ? `${lookupEntry.rem} h` : "—"}</span></div>
+                <div className="stat-row"><span className="stat-label">Ligero</span><span className="stat-value">{typeof lookupEntry.light === "number" ? `${lookupEntry.light} h` : "—"}</span></div>
+                <div className="stat-row"><span className="stat-label">Hora de acostarte</span><span className="stat-value">{lookupEntry.bedtime || "—"}</span></div>
+                <div className="stat-row"><span className="stat-label">Hora de despertar</span><span className="stat-value">{lookupEntry.wake || "—"}</span></div>
+              </React.Fragment>
+            ) : (
+              <div className="empty">Sin registro de sueño para esta fecha.</div>
+            )}
+          </div>
+
+          <div className="section-pad">
+            <p className="section-label">Sueño y hábitos</p>
+          </div>
+          <div className="card-quiet-pad">
+            <div className="field-row-mini" style={{ marginBottom: 16 }}>
+              <div className="field-mini">
+                <label>Umbral "muchas horas" (≥)</label>
+                <input
+                  type="number" step="0.5" min="0" max="24"
+                  value={sleepThresholds.high}
+                  onChange={(e) => setSleepThresholds({ ...sleepThresholds, high: parseFloat(e.target.value) || 0 })}
+                />
+              </div>
+              <div className="field-mini">
+                <label>Umbral "pocas horas" (&lt;)</label>
+                <input
+                  type="number" step="0.5" min="0" max="24"
+                  value={sleepThresholds.low}
+                  onChange={(e) => setSleepThresholds({ ...sleepThresholds, low: parseFloat(e.target.value) || 0 })}
+                />
+              </div>
+            </div>
+            <div className="corr-bar-row">
+              <div className="corr-bar-label">
+                <span>Con {sleepThresholds.high}+ horas de sueño{sleepHabitCorrelation.highN > 0 ? ` (${sleepHabitCorrelation.highN}d)` : ""}</span>
+                <span>{sleepHabitCorrelation.high === null ? "—" : `${Math.round(sleepHabitCorrelation.high)}%`}</span>
+              </div>
+              <div className="corr-bar-track"><div className="corr-bar-fill" style={{ width: `${sleepHabitCorrelation.high || 0}%` }}></div></div>
+            </div>
+            <div className="corr-bar-row">
+              <div className="corr-bar-label">
+                <span>Con menos de {sleepThresholds.low} horas{sleepHabitCorrelation.lowN > 0 ? ` (${sleepHabitCorrelation.lowN}d)` : ""}</span>
+                <span>{sleepHabitCorrelation.low === null ? "—" : `${Math.round(sleepHabitCorrelation.low)}%`}</span>
+              </div>
+              <div className="corr-bar-track"><div className="corr-bar-fill striped" style={{ width: `${sleepHabitCorrelation.low || 0}%` }}></div></div>
+            </div>
+            {(sleepHabitCorrelation.high === null || sleepHabitCorrelation.low === null) && (
+              <p className="sub-note" style={{ marginTop: 10 }}>Necesitas más días con datos de sueño y hábitos para ver la comparación.</p>
+            )}
+          </div>
+
+          <div className="section-pad">
+            <p className="section-label">Copia de seguridad</p>
+          </div>
+          <div className="card-quiet-pad">
+            <button className="btn-quiet" onClick={exportData}>Exportar copia de seguridad</button>
+            <button className="btn-quiet" onClick={triggerImport}>Importar copia</button>
+            <input ref={fileInputRef} type="file" accept="application/json" style={{ display: "none" }} onChange={handleImportFile} />
+            {importMsg && <p className="sub-note">{importMsg}</p>}
+            <p className="sub-note" style={{ marginTop: 10 }}>Tus datos ya se guardan en este dispositivo automáticamente. Exporta una copia de vez en cuando por si cambias de teléfono o borras datos de Safari.</p>
+          </div>
+        </React.Fragment>
+      )}
+
+      {tab === "calendario" && (
+        <React.Fragment>
+          <div className="cal-nav">
+            <button className="icon-btn" onClick={() => goToMonth(-1)} aria-label="Mes anterior">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <span className="cal-month-label">{monthLabel(monthKeyOf(calMonth.year, calMonth.monthIdx))}</span>
+            <button className="icon-btn" onClick={() => goToMonth(1)} aria-label="Mes siguiente">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+
+          <div className="gcal-grid">
+            {DAY_NAMES_MON.map((d) => <div className="gcal-dow" key={d}>{d}</div>)}
+            {calWeeks.map((cell) => {
+              const isToday = cell.dateStr === today;
+              const isSelected = cell.dateStr === calSelected;
+              const count = (calendarEvents[cell.dateStr] || []).length;
+              return (
+                <div
+                  key={cell.dateStr}
+                  className={`gcal-cell ${cell.inMonth ? "" : "other-month"} ${isToday ? "today" : ""} ${isSelected ? "selected" : ""}`}
+                  onClick={() => setCalSelected(cell.dateStr)}
+                >
+                  <span>{cell.day}</span>
+                  <div className="gcal-dot-row">
+                    {Array.from({ length: Math.min(count, 3) }).map((_, i) => <span className="gcal-dot" key={i}></span>)}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="section-pad">
+            <p className="section-label">{new Date(calSelected + "T00:00:00").toLocaleDateString("es-ES", { weekday: "long", day: "numeric", month: "long" })}</p>
+          </div>
+          <div className="card-quiet-pad">
+            {(calendarEvents[calSelected] || []).length === 0 && (
+              <p className="sub-note" style={{ margin: "0 0 6px" }}>Sin anotaciones para este día.</p>
+            )}
+            {(calendarEvents[calSelected] || []).map((ev) => (
+              <div className="agenda-item" key={ev.id}>
+                {editingEventId === ev.id ? (
+                  <input
+                    className="agenda-edit-input"
+                    value={editingEventText}
+                    autoFocus
+                    onChange={(e) => setEditingEventText(e.target.value)}
+                    onKeyDown={(e) => e.key === "Enter" && saveEditEvent(calSelected, ev.id)}
+                    onBlur={() => saveEditEvent(calSelected, ev.id)}
+                  />
+                ) : (
+                  <span className="agenda-text" onClick={() => startEditEvent(ev)} style={{ cursor: "pointer" }}>{ev.text}</span>
+                )}
+                <button className="icon-btn" onClick={() => startEditEvent(ev)} aria-label="Editar nota"><EditIcon /></button>
+                <button className="icon-btn" onClick={() => removeCalEvent(calSelected, ev.id)} aria-label="Eliminar nota"><XIcon /></button>
+              </div>
+            ))}
+            <div className="add-row-open" style={{ padding: "12px 0 0" }}>
+              <button className="plus-circ" onClick={addCalEvent} aria-label="Añadir nota"><PlusIcon /></button>
+              <input
+                value={calNewText}
+                onChange={(e) => setCalNewText(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && addCalEvent()}
+                placeholder="Añadir nota para este día (opcional)"
+              />
+            </div>
+          </div>
+
+          <div className="section-pad">
+            <p className="section-label">Horario del día</p>
+          </div>
+          <div className="card-quiet-pad">
+            {scheduleList.length === 0 && (
+              <p className="sub-note" style={{ margin: "0 0 10px" }}>Aún no has planificado este día.</p>
+            )}
+            <div className="sched-timeline-wrap" ref={timelineRef}>
+              <div className="sched-timeline" style={{ height: 24 * HOUR_HEIGHT }}>
+                <div className="sched-hours">
+                  {Array.from({ length: 24 }).map((_, h) => (
+                    <span className="sched-hour-label" style={{ top: h * HOUR_HEIGHT }} key={h}>{hourLabel(h)}</span>
+                  ))}
+                </div>
+                <div className="sched-lane">
+                  {Array.from({ length: 24 }).map((_, h) => (
+                    <div className="sched-hline" style={{ top: h * HOUR_HEIGHT }} key={h}></div>
+                  ))}
+                  {calSelected === today && (
+                    <div className="sched-now-line" style={{ top: (nowMinutes / 60) * HOUR_HEIGHT }}>
+                      <span className="sched-now-dot"></span>
+                    </div>
+                  )}
+                  {positionedSchedule.map((b, i) => {
+                    const top = (b.startMin / 60) * HOUR_HEIGHT;
+                    const height = Math.max(((b.endMin - b.startMin) / 60) * HOUR_HEIGHT, 20);
+                    const widthPct = 100 / b.totalCols;
+                    return (
+                      <div
+                        key={b.id}
+                        className={`sched-block pat-${(i % 5) + 1} ${b.recurring ? "rec-badge" : ""}`}
+                        style={{ top, height, left: `calc(${b.col * widthPct}% + 2px)`, width: `calc(${widthPct}% - 4px)` }}
+                        onClick={() => startEditSchedule(b)}
+                      >
+                        <span className="sched-block-time">{b.start || "—"}{b.end ? ` – ${b.end}` : ""}</span>
+                        <span className="sched-block-text">{b.text}</span>
+                        <button className="sched-block-del" onClick={(e) => { e.stopPropagation(); removeSchedule(calSelected, b); }} aria-label="Eliminar bloque"><XIcon /></button>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+            <div className="sched-add-row" style={{ marginTop: 14 }}>
+              <div className="field-mini"><label>Inicio</label><input type="time" value={schStart} onChange={(e) => setSchStart(e.target.value)} /></div>
+              <div className="field-mini"><label>Fin</label><input type="time" value={schEnd} onChange={(e) => setSchEnd(e.target.value)} /></div>
+            </div>
+            <div className="add-row-open" style={{ padding: "10px 0 0" }}>
+              <button className="plus-circ" onClick={addSchedule} aria-label={editingScheduleId ? "Guardar cambios" : "Añadir bloque"}>
+                {editingScheduleId ? <CheckIcon /> : <PlusIcon />}
+              </button>
+              <input
+                value={schText}
+                onChange={(e) => setSchText(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && addSchedule()}
+                placeholder="Actividad (ej. Reunión, gimnasio...)"
+              />
+            </div>
+            <div className="sched-recur-row" onClick={() => setSchRecurring((v) => !v)}>
+              <input type="checkbox" checked={schRecurring} onChange={() => setSchRecurring((v) => !v)} onClick={(e) => e.stopPropagation()} />
+              <span>Repetir cada semana</span>
+            </div>
+            {schRecurring && (
+              <div className="day-picker" style={{ marginTop: 10 }}>
+                {DAY_NAMES_MON.map((label, i) => {
+                  const dayNum = i === 6 ? 0 : i + 1;
+                  const active = schRecurDays.includes(dayNum);
+                  return (
+                    <button
+                      key={dayNum}
+                      type="button"
+                      className={`day-chip ${active ? "active" : ""}`}
+                      onClick={() => setSchRecurDays((prev) => (prev.includes(dayNum) ? prev.filter((x) => x !== dayNum) : [...prev, dayNum]))}
+                    >
+                      {label}
+                    </button>
+                  );
+                })}
+              </div>
+            )}
+            {editingScheduleId && (
+              <button className="btn-quiet" style={{ marginTop: 10 }} onClick={resetScheduleForm}>Cancelar edición</button>
+            )}
+            {recurringSchedules.length > 0 && (
+              <div className="recurring-list">
+                <p className="sub-note" style={{ margin: "0 0 4px" }}>Bloques recurrentes</p>
+                {recurringSchedules.map((r) => (
+                  <div className="recurring-item" key={r.id}>
+                    <div>
+                      <div className="recurring-item-text">{r.text} · {r.start || "—"}{r.end ? ` – ${r.end}` : ""}</div>
+                      <div className="recurring-item-days">{daysLabel(r.days)}</div>
+                    </div>
+                    <button className="icon-btn" onClick={() => setRecurringSchedules(recurringSchedules.filter((x) => x.id !== r.id))} aria-label="Eliminar serie"><XIcon /></button>
+                  </div>
+                ))}
+              </div>
+            )}
+            {scheduleList.length > 0 && (
+              <div style={{ marginTop: 16, paddingTop: 14, borderTop: "1px solid var(--border-light)" }}>
+                <p className="sub-note" style={{ margin: "0 0 8px" }}>Duplicar este horario a otro día</p>
+                <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap" }}>
+                  <input className="date-input-mini" type="date" value={dupDate} onChange={(e) => setDupDate(e.target.value)} />
+                  <button
+                    className="btn-quiet"
+                    style={{ width: "auto", margin: 0, padding: "8px 14px" }}
+                    onClick={duplicateSchedule}
+                    disabled={!dupDate}
+                  >
+                    Duplicar
+                  </button>
+                </div>
+                {dupMsg && <p className="save-msg" style={{ marginTop: 8 }}>{dupMsg}</p>}
+              </div>
+            )}
+          </div>
+        </React.Fragment>
+      )}
+
+      <footer>Los hábitos se reinician automáticamente cada día</footer>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+
+<script>
+  function showHabitosBanner(text) {
+    var el = document.createElement("div");
+    el.textContent = text;
+    el.style.cssText = "position:fixed;left:12px;right:12px;bottom:16px;z-index:99999;background:#171717;color:#fff;padding:13px 18px;border-radius:14px;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:13px;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.35);";
+    document.body.appendChild(el);
+    setTimeout(function () { el.remove(); }, 6000);
+  }
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.addEventListener("message", function (event) {
+      if (event.data && event.data.type === "HABITOS_CACHE_READY") {
+        showHabitosBanner("✓ Copia offline guardada — ya puedes usar la app sin internet");
+      }
+    });
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("./sw.js").catch(() => {
+        // Si falla el registro (ej. abierto como archivo local sin servidor),
+        // la app sigue funcionando normal, solo sin modo offline.
+      });
+    });
+  }
+</script>
+</body>
+</html>
