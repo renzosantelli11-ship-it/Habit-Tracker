@@ -1634,7 +1634,19 @@ ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 </script>
 
 <script>
+  function showHabitosBanner(text) {
+    var el = document.createElement("div");
+    el.textContent = text;
+    el.style.cssText = "position:fixed;left:12px;right:12px;bottom:16px;z-index:99999;background:#171717;color:#fff;padding:13px 18px;border-radius:14px;font-family:-apple-system,BlinkMacSystemFont,sans-serif;font-size:13px;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.35);";
+    document.body.appendChild(el);
+    setTimeout(function () { el.remove(); }, 6000);
+  }
   if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.addEventListener("message", function (event) {
+      if (event.data && event.data.type === "HABITOS_CACHE_READY") {
+        showHabitosBanner("✓ Copia offline guardada — ya puedes usar la app sin internet");
+      }
+    });
     window.addEventListener("load", () => {
       navigator.serviceWorker.register("./sw.js").catch(() => {
         // Si falla el registro (ej. abierto como archivo local sin servidor),
