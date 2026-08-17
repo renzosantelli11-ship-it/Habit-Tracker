@@ -27,12 +27,19 @@
 
 - [ ] Backup export improvement: `Blob Download` ➡️ `Web Share API`.
 
----
-
 ## 👨‍💻 Created By
 
 Developed by **renzosantelli11-ship-it** 🚀
 
 > This app was conceptualized, designed, and tested by **renzosantelli11-ship-it**. The code was generated with the assistance of Artificial Intelligence models.
 > 
-> *Proof that creativity + the right AI tools can build massive things!* 💡
+> *Proof that creativity + the right AI tools can build massive things!* 💡---
+
+## 🚀 More Free Apps / Más Apps
+
+If you like this **Habit Tracker**, check out my other live project:
+
+| App |
+| 🎯 **Goal Tracker** | Set, track, and achieve your personal goals step-by-step. | 🟢 **Live** | [Try App](https://renzosantelli11-ship-it.github.io/Orbit/
+
+👉 **[View my full GitHub Profile](https://github.com/renzosantelli11-ship-it)**
