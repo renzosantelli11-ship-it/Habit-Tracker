@@ -4,7 +4,7 @@
 // sube también este archivo con CACHE_VERSION incrementado (v2 -> v3 -> v4...).
 // Si no cambias el número, el navegador seguirá sirviendo la versión vieja
 // desde la caché y no vas a ver tus cambios.
-const CACHE_VERSION = "v3";
+const CACHE_VERSION = "v4";
 const CACHE_NAME = "habitos-" + CACHE_VERSION;
 
 // Recursos del propio sitio (mismo origen).
