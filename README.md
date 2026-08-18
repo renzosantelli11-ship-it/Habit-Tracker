@@ -21,6 +21,10 @@
 * **HTML5** (96%) - Layout and UI structure.
 * **JavaScript** (4%) - Interactive logic and local storage.
 
+> Note: GitHub's language stats on the repo overview may show 100% JavaScript.
+> This is a quirk of GitHub's language detector (Linguist), which excludes
+> files with very long lines (like the base64 icon embedded in `index.html`)
+> from its count — not an actual change in the codebase.
 ---
 
 ## 🗺️ Roadmap (Upcoming Features)
